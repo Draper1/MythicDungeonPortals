@@ -16,6 +16,18 @@ local myIdToExpansion = {
     [7] = "War Within"
 }
 
+local orderedExpansions = {
+    "Cataclysm",
+    "Mists of Pandaria",
+    "Warlords of Draenor",
+    "Legion",
+    "Battle For Azeroth",
+    "Shadowlands",
+    "Dragonflight",
+    "War Within"
+}
+
+
 local mapExpansionToMapID = {
     ["Cataclysm"] = {438, 456},
     ["Mists of Pandaria"] = {2, 3, 4, 5, 6, 7, 8, 9, 10},
@@ -143,7 +155,7 @@ local mapExpansionToBackground = {
     ["War Within"] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\WarWithin.tga",
 }
 
-local iconPath = "Interface\\AddOns\\MythicDungeonPortals\\icon.tga"
+local iconPath = "Interface\\Icons\\Achievement_ChallengeMode_Gold"
 
 local frame = CreateFrame("Frame", "MDPPortalsFrame", UIParent, "BasicFrameTemplate")
 
@@ -262,6 +274,10 @@ local function CreateTab(expansionName, mapIDs)
     tabButton:SetNormalFontObject("GameFontNormal")
     tabButton:SetHighlightFontObject("GameFontHighlight")
 
+    if expansionName == "War Within" then 
+        tabButton:Disable()
+    end
+
     local tabFrame = CreateFrame("Frame", nil, frame)
     tabFrame:SetAllPoints()
     tabFrame:Hide()
@@ -285,8 +301,11 @@ local function CreateTab(expansionName, mapIDs)
 end
 
 local function InitializeTabs()
-    for expansion, mapIDs in pairs(mapExpansionToMapID) do
-        CreateTab(expansion, mapIDs)
+    for _, expansion in ipairs(orderedExpansions) do
+        local mapIDs = mapExpansionToMapID[expansion]
+        if mapIDs then
+            CreateTab(expansion, mapIDs)
+        end
     end
 end
 
@@ -302,12 +321,50 @@ local function SlashCmdHandler(msg, editbox)
     ToggleFrame()
 end
 
+local function UpdateMinimapButtonPosition()
+    local angle = math.rad(MDPMinimapButton.db.angle)
+    local x, y = math.cos(angle), math.sin(angle)
+    MDPMinimapButton:SetPoint("TOPLEFT", Minimap, "TOPLEFT", 52 - (x * 80), (y * 80) - 52)
+end
+
+local function MinimapButtonOnDragStart(self)
+    self:StartMoving()
+    self.isMoving = true
+end
+
+local function MinimapButtonOnDragStop(self)
+    self:StopMovingOrSizing()
+    self.isMoving = false
+    -- Save the new angle
+    local cursorX, cursorY = GetCursorPosition()
+    local minimapX, minimapY = Minimap:GetCenter()
+    minimapX, minimapY = minimapX * Minimap:GetEffectiveScale(), minimapY * Minimap:GetEffectiveScale()
+    local angle = math.deg(math.atan2(cursorY - minimapY, cursorX - minimapX)) % 360
+    MDPMinimapButton.db.angle = angle
+    UpdateMinimapButtonPosition()
+end
+
 -- Create the Minimap Button
 local minimapButton = CreateFrame("Button", "MDPMinimapButton", Minimap)
-minimapButton:SetSize(32, 32)
+minimapButton:SetSize(24, 24)
 minimapButton:SetFrameStrata("MEDIUM")
 minimapButton:SetFrameLevel(8)
-minimapButton:SetNormalTexture(iconPath)
+
+-- Set the icon texture
+local icon = minimapButton:CreateTexture(nil, "ARTWORK")
+icon:SetAllPoints(minimapButton)
+icon:SetTexture(iconPath) -- Your icon path
+icon:SetMask("Interface\\CharacterFrame\\TempPortraitAlphaMask")
+
+minimapButton:SetNormalTexture(icon)
+
+-- Add a border texture
+local border = minimapButton:CreateTexture(nil, "OVERLAY")
+border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
+border:SetPoint("TOPLEFT", minimapButton, "TOPLEFT", -5, 5)
+border:SetPoint("BOTTOMRIGHT", minimapButton, "BOTTOMRIGHT", 5, -5)
+
+-- Set the highlight texture
 minimapButton:SetHighlightTexture("Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight")
 
 -- Position the button around the minimap
@@ -324,7 +381,7 @@ end)
 minimapButton:SetScript("OnEnter", function(self)
     GameTooltip:SetOwner(self, "ANCHOR_LEFT")
     GameTooltip:AddLine("MythicDungeonPortals", 1, 1, 1)
-    GameTooltip:AddLine("Click to show/hide the frame.", nil, nil, nil, true)
+    GameTooltip:AddLine("Click to Open/Close.", nil, nil, nil, true)
     GameTooltip:Show()
 end)
 minimapButton:SetScript("OnLeave", function(self)
@@ -339,7 +396,7 @@ frame:SetScript("OnEvent", function(self, event, addonNameLoaded)
         InitializeTabs()
         frame:Hide()
         self:UnregisterEvent("PLAYER_ENTERING_WORLD")  -- Unregister the event as it's no longer needed after initialization
-    endw
+    end
 end)
 
 -- Register the necessary events
