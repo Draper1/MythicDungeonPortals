@@ -331,15 +331,20 @@ minimapButton:SetScript("OnLeave", function(self)
     GameTooltip:Hide()
 end)
 
--- Register the addon with WoW's event system
-frame:RegisterEvent("ADDON_LOADED")
 frame:SetScript("OnEvent", function(self, event, addonNameLoaded)
     if event == "ADDON_LOADED" and addonNameLoaded == addonName then
+        print("Mythic Dungeon Portals loaded. Waiting for player to enter the world...")
+    elseif event == "PLAYER_ENTERING_WORLD" then
         print("Initializing Mythic Dungeon Portals")
         InitializeTabs()
         frame:Hide()
-    end
+        self:UnregisterEvent("PLAYER_ENTERING_WORLD")  -- Unregister the event as it's no longer needed after initialization
+    endw
 end)
+
+-- Register the necessary events
+frame:RegisterEvent("ADDON_LOADED")
+frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 
 -- Register slash command
 SLASH_MDP1 = "/mdp"
