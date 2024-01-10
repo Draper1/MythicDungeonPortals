@@ -1,0 +1,7 @@
+## Interface: 90002
+## Title: Mythic Dungeon Portals
+## Notes: Easy UI for quickly finding the mythic dungeon portals
+## Author: Andrew Draper
+## Version: 1.0
+
+MythicDungeonPortals.lua
