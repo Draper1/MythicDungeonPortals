@@ -25,27 +25,35 @@ jobs:
         run: python -m pip install --upgrade pip setuptools wheel
 
       - name: Zip the project
-        run: zip -r release.zip . -x "*.git*"
+        run: |
+          mkdir MythicDungeonPortals
+          # Move all necessary files and directories to the new directory
+          mv * MythicDungeonPortals/ 2> /dev/null || :
+          mv .* MythicDungeonPortals/ 2> /dev/null || :
+          # Remove the directory itself from being moved
+          rmdir MythicDungeonPortals/MythicDungeonPortals
+          # Create the zip archive
+          zip -r release.zip MythicDungeonPortals
 
       - name: Extract Version from TOC file
+        id: get_version
         run: |
           VERSION=$(grep '## Version:' MythicDungeonPortals.toc | cut -d ' ' -f 3)
-          echo "version=v$VERSION" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_ENV
 
       - name: Create a new tag
-        id: tagger
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: mathieudutour/github-tag-action@v5.6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: none
-          tag_override: v${{ env.version }}
+          custom_tag: v${{ env.version }}
 
       - name: Create Release
         if: steps.tagger.outputs.new_tag != ''
         uses: softprops/action-gh-release@v1
         with:
           files: release.zip
-          tag_name: ${{ steps.tagger.outputs.new_tag }}
+          tag_name: v${{ env.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
