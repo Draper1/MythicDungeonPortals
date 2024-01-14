@@ -23,18 +23,18 @@ jobs:
 
       - name: Install dependencies
         run: python -m pip install --upgrade pip setuptools wheel
+        
+      - name: Extract Version from TOC file
+        run: |
+          VERSION=$(grep '## Version:' MythicDungeonPortals.toc | cut -d ' ' -f 3)
+          echo "version=$VERSION" >> $GITHUB_ENV
+          echo "Extracted version: $VERSION"
 
       - name: Zip the project
         run: |
           mkdir MythicDungeonPortals
           find . -maxdepth 1 ! -name 'MythicDungeonPortals' ! -name '.' ! -name '.git' -exec mv {} MythicDungeonPortals/ \;
           zip -r release.zip MythicDungeonPortals
-
-      - name: Extract Version from TOC file
-        run: |
-          VERSION=$(grep '## Version:' MythicDungeonPortals.toc | cut -d ' ' -f 3)
-          echo "version=$VERSION" >> $GITHUB_ENV
-          echo "Extracted version: $VERSION"
 
       - name: Create a new tag
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
