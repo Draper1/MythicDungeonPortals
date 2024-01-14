@@ -28,12 +28,9 @@ jobs:
         run: zip -r release.zip . -x "*.git*"
 
       - name: Extract Version from TOC file
-        id: get_version
         run: |
           VERSION=$(grep '## Version:' MythicDungeonPortals.toc | cut -d ' ' -f 3)
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "::set-output name=version::v$VERSION"
-          echo "Extracted version: v$VERSION"
+          echo "version=v$VERSION" >> $GITHUB_OUTPUT
 
       - name: Create a new tag
         id: tagger
@@ -42,7 +39,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: none
-          tag_override: ${{ steps.get_version.outputs.version }}
+          tag_override: v${{ env.version }}
 
       - name: Create Release
         if: steps.tagger.outputs.new_tag != ''
