@@ -27,12 +27,7 @@ jobs:
       - name: Zip the project
         run: |
           mkdir MythicDungeonPortals
-          # Move all necessary files and directories to the new directory
-          mv * MythicDungeonPortals/ 2> /dev/null || :
-          mv .* MythicDungeonPortals/ 2> /dev/null || :
-          # Remove the directory itself from being moved
-          rmdir MythicDungeonPortals/MythicDungeonPortals
-          # Create the zip archive
+          find . -maxdepth 1 ! -name 'MythicDungeonPortals' ! -name '.' ! -name '.git' -exec mv {} MythicDungeonPortals/ \;
           zip -r release.zip MythicDungeonPortals
 
       - name: Extract Version from TOC file
