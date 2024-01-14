@@ -42,10 +42,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: none
-          custom_tag: v${{ env.version }}
+          custom_tag: ${{ env.version }}
 
       - name: Create Release
-        if: steps.tagger.outputs.new_tag != ''
         uses: softprops/action-gh-release@v1
         with:
           files: release.zip
