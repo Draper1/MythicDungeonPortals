@@ -1,0 +1,53 @@
+name: Release Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip setuptools wheel
+
+      - name: Zip the project
+        run: zip -r release.zip . -x "*.git*"
+
+      - name: Extract Version from TOC file
+        id: get_version
+        run: |
+          VERSION=$(grep '## Version:' MythicDungeonPortals.toc | cut -d ' ' -f 3)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "::set-output name=version::$VERSION"
+
+      - name: Create a new tag
+        id: tagger
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: mathieudutour/github-tag-action@v5.6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: none
+          tag_override: v${{ steps.get_version.outputs.version }}
+
+      - name: Create Release
+        if: steps.tagger.outputs.new_tag != ''
+        uses: softprops/action-gh-release@v1
+        with:
+          files: release.zip
+          tag_name: ${{ steps.tagger.outputs.new_tag }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
