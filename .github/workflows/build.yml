@@ -31,10 +31,10 @@ jobs:
           zip -r release.zip MythicDungeonPortals
 
       - name: Extract Version from TOC file
-        id: get_version
         run: |
           VERSION=$(grep '## Version:' MythicDungeonPortals.toc | cut -d ' ' -f 3)
           echo "version=$VERSION" >> $GITHUB_ENV
+          echo "Extracted version: $VERSION"
 
       - name: Create a new tag
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
