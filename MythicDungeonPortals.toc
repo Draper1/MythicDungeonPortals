@@ -2,7 +2,7 @@
 ## Title: Mythic Dungeon Portals
 ## Notes: Easy UI for quickly finding the mythic dungeon portals
 ## Author: Andrew Draper
-## Version: 1.2
+## Version: 1.3
 ## X-Curse-Project-ID: 960519
 ## SavedVariables: MythicDungeonPortalsSettings
 
