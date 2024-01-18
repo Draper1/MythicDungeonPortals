@@ -1,3 +1,10 @@
 local _, addon = ...
+MythicDungeonPortals = MythicDungeonPortals or {}
 
-addon.angle = 45
+function MythicDungeonPortals:OnInitialize()
+    if not MythicDungeonPortalsSettings then
+        MythicDungeonPortalsSettings = {
+            isMinimapEnabled = true
+        }
+    end
+end

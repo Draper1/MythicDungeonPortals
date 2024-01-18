@@ -4,6 +4,7 @@ local constants = addon.constants
 
 local currentTab = nil
 local totalTabs = 0
+local debug = false
 
 local MDPFrame = CreateFrame("Frame", "MDPFrame", UIParent, "BasicFrameTemplate")
 
@@ -140,8 +141,9 @@ local function CreateTab(expansionName, mapIDs)
         UpdateMDPTabs(expansionName)
         UpdateFrameBackground(expansionName)
     end
-
-    print("Tab created for " .. expansionName) 
+    if debug == true then
+        print("Tab created for " .. expansionName)
+    end
 end
 
 local function InitializeTabs()
@@ -165,19 +167,12 @@ local function SlashCmdHandler(msg, editbox)
     ToggleFrame()
 end
 
-local function LoadDefaultSettings(addonName)
-    if not MythicDungeonPortalsSettings then
-        MythicDungeonPortalsSettings = {}
-    end
-    MythicDungeonPortalsSettings.isMinimapEnabled = true
-end
-
 MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
     if event == "ADDON_LOADED" and addonNameLoaded == addonName then
-        LoadDefaultSettings()
-        print("Mythic Dungeon Portals loaded. Waiting for player to enter the world...")
+        if debug == true then
+            print("Mythic Dungeon Portals loaded. Waiting for player to enter the world...")
+        end
     elseif event == "PLAYER_ENTERING_WORLD" then
-        print("Initializing Mythic Dungeon Portals")
         InitializeTabs()
         MDPFrame:Hide()
         self:UnregisterEvent("PLAYER_ENTERING_WORLD")
