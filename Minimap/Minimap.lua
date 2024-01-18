@@ -31,12 +31,15 @@ local mythicDungeonPortalsLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Myth
 addon.icon = LibStub("LibDBIcon-1.0")
 
 function addon:OnInitialize()
+	if not MythicDungeonPortalsSettings then
+		MythicDungeonPortalsSettings = {}
+	end
 	self.db = LibStub("AceDB-3.0"):New("MythicDungeonPortalsMinimap", {
 		profile = {
-			minimap = {
-				hide = not MythicDungeonPortalsSettings.isMinimapEnabled,
-			},
-		},
-	})
-	addon.icon:Register("MythicDungeonPortals", mythicDungeonPortalsLDB, self.db.profile.minimap)
+            		minimap = {
+                		hide = not MythicDungeonPortalsSettings.isMinimapEnabled,
+           		},
+        	},
+    	})
+    	addon.icon:Register("MythicDungeonPortals", mythicDungeonPortalsLDB, self.db.profile.minimap)
 end
