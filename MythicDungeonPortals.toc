@@ -2,12 +2,24 @@
 ## Title: Mythic Dungeon Portals
 ## Notes: Easy UI for quickly finding the mythic dungeon portals
 ## Author: Andrew Draper
-## Version: 1.3
+## Version: 1.4
 ## X-Curse-Project-ID: 960519
 ## SavedVariables: MythicDungeonPortalsSettings
 
 Init.lua
+Localization\Localization.lua
+Localization\Localization.enUS.lua
+Localization\Localization.ptBR.lua
+Localization\Localization.deDE.lua
+Localization\Localization.esMX.lua
+Localization\Localization.frFR.lua
+Localization\Localization.itIT.lua
+Localization\Localization.koKR.lua
+Localization\Localization.ruRU.lua
+Localization\Localization.zhCN.lua
+Localization\Localization.zhTW.lua
+
 Constants.lua
 MythicDungeonPortals.lua
-
+Settings\Settings.lua
 Minimap\Minimap.lua

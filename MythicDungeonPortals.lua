@@ -4,7 +4,6 @@ local constants = addon.constants
 
 local currentTab = nil
 local totalTabs = 0
-local debug = false
 
 local MDPFrame = CreateFrame("Frame", "MDPFrame", UIParent, "BasicFrameTemplate")
 
@@ -59,6 +58,16 @@ local function AddSpellIcons(tabFrame, mapIDs)
             local spellTexture = GetSpellTexture(spellID)
             icon:SetTexture(spellTexture)
 
+            -- Create cooldown frame
+            local cooldown = CreateFrame("Cooldown", nil, button, "CooldownFrameTemplate")
+            cooldown:SetAllPoints(button)
+
+            -- Update the cooldown
+            local function UpdateCooldown()
+                local start, duration, enable = GetSpellCooldown(spellID)
+                CooldownFrame_Set(cooldown, start, duration, enable)
+            end
+
             -- Check if the spell is learned
             if not HasLearnedSpell(spellID) then
                 icon:SetDesaturated(true)
@@ -68,7 +77,11 @@ local function AddSpellIcons(tabFrame, mapIDs)
                 button:SetAttribute("type", "spell")
                 button:SetAttribute("unit", "player")
                 button:SetAttribute("spell", spellID)
+                UpdateCooldown() -- Update cooldown initially
             end
+
+            button:RegisterEvent("SPELL_UPDATE_COOLDOWN")
+            button:SetScript("OnEvent", UpdateCooldown)
 
             button:SetScript("OnEnter", function(self)
                 GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -86,6 +99,7 @@ local function AddSpellIcons(tabFrame, mapIDs)
     end
 end
 
+
 local function UpdateMDPTabs(selectedTabName)
     for name, tabFrame in pairs(contentFrames) do
         if name == selectedTabName then
@@ -99,7 +113,7 @@ end
 
 local function UpdateFrameBackground(selectedTabName)
     local texturePath = constants.mapExpansionToBackground[selectedTabName]
-    if texturePath then
+    if texturePath and MythicDungeonPortalsSettings.BackgroundVisible then
         MDPFrame.background:SetTexture(texturePath)
         MDPFrame.background:Show()
     else
@@ -141,9 +155,13 @@ local function CreateTab(expansionName, mapIDs)
         UpdateMDPTabs(expansionName)
         UpdateFrameBackground(expansionName)
     end
-    if debug == true then
+    if constants.debugMode == true then
         print("Tab created for " .. expansionName)
     end
+end
+
+function MythicDungeonPortals:UpdateBackgroundVisibility()
+    UpdateFrameBackground(currentTab)
 end
 
 local function InitializeTabs()
@@ -169,7 +187,10 @@ end
 
 MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
     if event == "ADDON_LOADED" and addonNameLoaded == addonName then
-        if debug == true then
+        MythicDungeonPortals:OnInitialize()
+        MythicDungeonPortals:InitializeMinimap()
+        MythicDungeonPortals:CreateSettingsFrame()
+        if constants.debugMode == true then
             print("Mythic Dungeon Portals loaded. Waiting for player to enter the world...")
         end
     elseif event == "PLAYER_ENTERING_WORLD" then
@@ -181,6 +202,19 @@ end)
 
 MDPFrame:RegisterEvent("ADDON_LOADED")
 MDPFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+
+local function SlashCmdHandler(msg, editbox)
+    local command, rest = msg:match("^(%S*)%s*(.-)$")
+    command = command:lower()
+    if command == "settings" then
+        local settingsFrame = MythicDungeonPortals:GetSettingsFrame()
+        if settingsFrame then
+            settingsFrame:SetShown(not settingsFrame:IsShown())
+        end
+    else
+        ToggleFrame()
+    end
+end
 
 SLASH_MDP1 = "/mdp"
 SlashCmdList["MDP"] = SlashCmdHandler
