@@ -4,7 +4,8 @@ MythicDungeonPortals = MythicDungeonPortals or {}
 function MythicDungeonPortals:OnInitialize()
     if not MythicDungeonPortalsSettings then
         MythicDungeonPortalsSettings = {
-            isMinimapEnabled = true
+            isMinimapEnabled = true,
+            BackgroundVisible = true,
         }
     end
 end
