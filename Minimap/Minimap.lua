@@ -51,7 +51,7 @@ function MythicDungeonPortals:UpdateMinimapIconVisibility(isVisible)
 end
 
 function MythicDungeonPortals:InitializeMinimap()
-	self.db = LibStub("AceDB-3.0"):New("MythicDungeonPortalsMinimap", {
+	self.db = LibStub("AceDB-3.0"):New("MythicDungeonPortalsSettings", {
 		profile = {
 			minimap = {
 				hide = not MythicDungeonPortalsSettings.isMinimapEnabled,

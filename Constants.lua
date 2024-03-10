@@ -28,14 +28,14 @@ local orderedExpansions = {
 }
 
 local mapExpansionToMapID = {
-    [L["Current Season"]] = {244, 199, 198, 463, 464, 168, 456, 248},
+    [L["Current Season"]] = {244, 199, 198, 463, 168, 456, 248},
     [L["Cataclysm"]] = {438, 456},
     [L["Mists of Pandaria"]] = {2, 3, 4, 5, 6, 7, 8, 9, 10},
     [L["Warlords of Draenor"]] = {165, 168, 169, 170, 171, 172, 173, 174},
     [L["Legion"]] = {198, 199, 200, 206, 210, 211},
     [L["Battle For Azeroth"]] = {244, 245, 248, 251, 252},
     [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308},
-    [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463, 464},
+    [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463},
     [L["War Within"]] = {} 
 }
 
@@ -87,8 +87,7 @@ local mapIDtoSpellID = {
     [406] = 393283, -- Halls of Infusion
     [438] = 410080, -- Vortex Pinnacle
     [456] = 424142, -- Throne of the Tides
-    [463] = 424197, -- Dawn of the Infinite Fall
-    [464] = 424197, -- Dawn of the Infinite Rise
+    [463] = 424197, -- Dawn of the Infinite
 };
 
 local mapIDtoDungeonName = {
@@ -139,8 +138,7 @@ local mapIDtoDungeonName = {
     [406] = L["DUNGEON_HALLS_OF_INFUSION"],
     [438] = L["DUNGEON_VORTEX_PINNACLE"],
     [456] = L["DUNGEON_THRONE_OF_THE_TIDES"],
-    [463] = L["DUNGEON_DAWN_OF_THE_INFINITE_FALL"],
-    [464] = L["DUNGEON_DAWN_OF_THE_INFINITE_RISE"]
+    [463] = L["DUNGEON_DAWN_OF_THE_INFINITE"],
 }
 
 
