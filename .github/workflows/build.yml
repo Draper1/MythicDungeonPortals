@@ -31,10 +31,20 @@ jobs:
         run: |
           mkdir MythicDungeonPortals
           find . -maxdepth 1 ! -name 'MythicDungeonPortals' ! -name '.' ! -name '.git' -exec mv {} MythicDungeonPortals/ \;
-          zip -r release.zip MythicDungeonPortals
+          zip -r "MythicDungeonPortals-${{ env.version }}.zip" MythicDungeonPortals
+
+      - name: Check if Tag Exists
+        id: check-tag
+        run: |
+          if git rev-parse "v${{ env.version }}" >/dev/null 2>&1; then
+              echo "Tag v${{ env.version }} already exists!"
+              echo "skip=true" >> $GITHUB_ENV
+          else
+              echo "skip=false" >> $GITHUB_ENV
+          fi
 
       - name: Create a new tag
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && env.skip == 'false'
         uses: mathieudutour/github-tag-action@v5.6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,9 +52,10 @@ jobs:
           custom_tag: ${{ env.version }}
 
       - name: Create Release
+        if: env.skip == 'false'
         uses: softprops/action-gh-release@v1
         with:
-          files: release.zip
+          files: "MythicDungeonPortals-${{ env.version }}.zip"
           tag_name: v${{ env.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -10,3 +10,5 @@ v1.3.0 Add OnInitialize and Addon Namespace Ensure SavedVariables are Initialize
 v1.4.0 Add Localization, Settings Menu, Slash Command Handlers, Fix SavedVariables, Add Spell Cooldowns
 
 v1.5.0 Remove Rise / Fall into a single dungeon and fix minimap position to saved variables.
+
+v1.6.0 Fix Russian translations, thanks to: [Hollicsh](https://github.com/Hollicsh)
