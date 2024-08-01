@@ -1,7 +1,7 @@
 local _, addon = ...
 local L = addon.L
 
-local debugMode = false
+local debugMode = true
 
 local myIdToExpansion = {
     [0] = L["Cataclysm"],
@@ -36,7 +36,7 @@ local mapExpansionToMapID = {
     [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252},
     [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308},
     [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463},
-    [L["War Within"]] = {} 
+    [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507}
 }
 
 local mapIDtoSpellID = {
@@ -88,6 +88,17 @@ local mapIDtoSpellID = {
     [438] = 410080, -- Vortex Pinnacle
     [456] = 424142, -- Throne of the Tides
     [463] = 424197, -- Dawn of the Infinite
+    [500] = 445416, -- City of Threads
+    [501] = 445417, -- Ara-Kara, City of Echoes
+    [502] = 445269, -- Stonevault
+    [503] = 445414, -- Dawnbreaker
+    [504] = 445443, -- The Rookery
+    [505] = 445441, -- Darkflame Cleft
+    [506] = 445440, -- Cinderbrew Brewery
+    [507] = 445444, -- Priory of the Sacred Flame
+    [508] = 445424, -- Grim Batol
+    [509] = 445418, -- Seige of Boralus (Alliance)
+    [510] = 464256, -- Seige of Boralus (Horde)
 };
 
 local mapIDtoDungeonName = {
@@ -139,6 +150,14 @@ local mapIDtoDungeonName = {
     [438] = L["DUNGEON_VORTEX_PINNACLE"],
     [456] = L["DUNGEON_THRONE_OF_THE_TIDES"],
     [463] = L["DUNGEON_DAWN_OF_THE_INFINITE"],
+    [500] = L['DUNGEON_CITY_OF_THREADS'],
+    [501] = L['DUNGEON_ARA_KARA_CITY_OF_ECHOS'],
+    [502] = L['DUNGEON_STONEVAULT'],
+    [503] = L['DUNGEON_DAWNBREAKER'],
+    [504] = L['DUNGEON_THE_ROOKERY'],
+    [505] = L['DUNGEON_DARKFLAME_CLEFT'],
+    [506] = L['DUNGEON_CINDERBREW_BREWERY'],
+    [507] = L['DUNGEON_PRIORY_OF_THE_SACRED_FLAME'],
 }
 
 
