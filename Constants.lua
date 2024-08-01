@@ -1,7 +1,7 @@
 local _, addon = ...
 local L = addon.L
 
-local debugMode = true
+local debugMode = false
 
 local myIdToExpansion = {
     [0] = L["Cataclysm"],
