@@ -133,10 +133,6 @@ local function CreateTab(expansionName, mapIDs)
     tabButton:SetNormalFontObject("GameFontNormal")
     tabButton:SetHighlightFontObject("GameFontHighlight")
 
-    if expansionName == "War Within" then 
-        tabButton:Disable()
-    end
-
     local tabFrame = CreateFrame("Frame", "TabFrame", MDPFrame)
     tabFrame:SetAllPoints()
     tabFrame:Hide()
