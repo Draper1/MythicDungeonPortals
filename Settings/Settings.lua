@@ -1,9 +1,10 @@
 local _, addon = ...
 local constants = addon.constants
+local L = addon.L
 
 function MythicDungeonPortals:CreateSettingsFrame()
     MDPSettingsFrame = CreateFrame("Frame", "MDPSettingsFrame", UIParent, "BasicFrameTemplate")
-    MDPSettingsFrame:SetSize(200, 150)
+    MDPSettingsFrame:SetSize(225, 120)
     MDPSettingsFrame:SetPoint("CENTER")
     MDPSettingsFrame:SetMovable(true)
     MDPSettingsFrame:EnableMouse(true)
@@ -18,12 +19,12 @@ function MythicDungeonPortals:CreateSettingsFrame()
     MDPSettingsFrame.title = MDPSettingsFrame:CreateFontString(nil, "OVERLAY")
     MDPSettingsFrame.title:SetFontObject("GameFontHighlight")
     MDPSettingsFrame.title:SetPoint("CENTER", MDPSettingsFrame.TitleBg, "CENTER")
-    MDPSettingsFrame.title:SetText("Mythic Dungeon Portals Settings")
+    MDPSettingsFrame.title:SetText(L["Mythic Dungeon Portals Settings"])
     MDPSettingsFrame.TitleBg:SetColorTexture(0, 0, 0)
 
     local bgCheckbox = CreateFrame("CheckButton", "BGCheckbox", MDPSettingsFrame, "UICheckButtonTemplate")
     bgCheckbox:SetPoint("TOPLEFT", 10, -30)
-    bgCheckbox.text:SetText("Show/Hide Backgrounds")
+    bgCheckbox.text:SetText(L["Show/Hide Backgrounds"])
     bgCheckbox:SetChecked(MythicDungeonPortalsSettings.BackgroundVisible)
     bgCheckbox:SetScript("OnClick", function(self)
         MythicDungeonPortalsSettings.BackgroundVisible = self:GetChecked()
@@ -35,7 +36,7 @@ function MythicDungeonPortals:CreateSettingsFrame()
 
     local minimapCheckbox = CreateFrame("CheckButton", "MinimapCheckbox", MDPSettingsFrame, "UICheckButtonTemplate")
     minimapCheckbox:SetPoint("TOPLEFT", 10, -60)
-    minimapCheckbox.text:SetText("Show/Hide Minimap Icon")
+    minimapCheckbox.text:SetText(L["Show/Hide Minimap Icon"])
     minimapCheckbox:SetChecked(MythicDungeonPortalsSettings.MinimapIconVisible)
     minimapCheckbox:SetScript("OnClick", function(self)
         local isChecked = self:GetChecked()

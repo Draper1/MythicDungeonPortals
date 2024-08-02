@@ -8,6 +8,7 @@ L["Legion"] = "军团再临"
 L["Battle for Azeroth"] = "争霸艾泽拉斯"
 L["Shadowlands"] = "暗影国度"
 L["Dragonflight"] = "巨龙时代"
+L["War Within"] = "War Within"
 L["Current Season"] = "当前赛季"
 
 -- 地下城
@@ -67,3 +68,10 @@ L["DUNGEON_THE_ROOKERY"] = "乌鸦之巢"
 L["DUNGEON_DARKFLAME_CLEFT"] = "暗焰裂口"
 L["DUNGEON_CINDERBREW_BREWERY"] = "灰烬酿酒厂"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "圣焰神殿"
+
+-- Settings
+L["Left click to open Portals"] = "Left click to open Portals"
+L["Right click to open settings"] = "Right click to open settings"
+L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
+L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
+L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"

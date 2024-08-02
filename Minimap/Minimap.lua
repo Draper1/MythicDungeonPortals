@@ -1,5 +1,6 @@
 local _, addon = ...
 local constants = addon.constants
+local L = addon.L
 
 LibStub("AceAddon-3.0"):NewAddon(addon, "MythicDungeonPortals", "AceConsole-3.0")
 
@@ -34,9 +35,9 @@ local mythicDungeonPortalsLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Myth
 		end  
 	end,
 	OnTooltipShow = function(tooltip)
-		tooltip:AddLine("Mythic Dungeon Portals")
-		tooltip:AddLine("Left click to open Portals")
-		tooltip:AddLine("Right click to open settings")
+		tooltip:AddLine(L["Mythic Dungeon Portals"])
+		tooltip:AddLine(L["Left click to open Portals"])
+		tooltip:AddLine(L["Right click to open settings"])
 	end,
 })
 
