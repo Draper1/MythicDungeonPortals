@@ -8,6 +8,7 @@ L["Legion"] = "Legion"
 L["Battle for Azeroth"] = "Battle for Azeroth"
 L["Shadowlands"] = "Shadowlands"
 L["Dragonflight"] = "Dragonflight"
+L["War Within"] = "War Within"
 L["Current Season"] = "Temporada Atual"
 
 -- Masmorras
@@ -67,3 +68,10 @@ L["DUNGEON_THE_ROOKERY"] = "O Pombal"
 L["DUNGEON_DARKFLAME_CLEFT"] = "Fenda Chama Negra"
 L["DUNGEON_CINDERBREW_BREWERY"] = "Cervejaria Cinzaferro"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priorado da Chama Sagrada"
+
+-- Settings
+L["Left click to open Portals"] = "Left click to open Portals"
+L["Right click to open settings"] = "Right click to open settings"
+L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
+L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
+L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
