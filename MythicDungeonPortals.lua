@@ -55,7 +55,7 @@ local function AddSpellIcons(tabFrame, mapIDs)
             -- Create and set icon texture
             local icon = button:CreateTexture(nil, "ARTWORK")
             icon:SetAllPoints(button)
-            local spellTexture = GetSpellTexture(spellID)
+            local spellTexture = C_Spell.GetSpellTexture(spellID)
             icon:SetTexture(spellTexture)
 
             -- Create cooldown frame
@@ -64,7 +64,7 @@ local function AddSpellIcons(tabFrame, mapIDs)
 
             -- Update the cooldown
             local function UpdateCooldown()
-                local start, duration, enable = GetSpellCooldown(spellID)
+                local start, duration, enable = C_Spell.GetSpellCooldown(spellID)
                 CooldownFrame_Set(cooldown, start, duration, enable)
             end
 
