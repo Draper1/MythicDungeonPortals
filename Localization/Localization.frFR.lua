@@ -8,6 +8,7 @@ L["Legion"] = "Légion"
 L["Battle for Azeroth"] = "Battle for Azeroth"
 L["Shadowlands"] = "Shadowlands"
 L["Dragonflight"] = "Dragonflight"
+L["War Within"] = "War Within"
 L["Current Season"] = "Saison Actuelle"
 
 -- Donjons
@@ -67,3 +68,10 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Brasserie Cendrée"
 L["DUNGEON_DARKFLAME_CLEFT"] = "Faille de la Flamme sombre"
 L["DUNGEON_THE_ROOKERY"] = "La Volière"
 L["DUNGEON_DAWNBREAKER"] = "Brise-aube"
+
+-- Settings
+L["Left click to open Portals"] = "Left click to open Portals"
+L["Right click to open settings"] = "Right click to open settings"
+L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
+L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
+L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
