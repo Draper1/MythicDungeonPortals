@@ -35,9 +35,9 @@ local mythicDungeonPortalsLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Myth
 		end  
 	end,
 	OnTooltipShow = function(tooltip)
-		tooltip:AddLine(L["Mythic Dungeon Portals"])
-		tooltip:AddLine(L["Left click to open Portals"])
-		tooltip:AddLine(L["Right click to open settings"])
+		tooltip:AddLine(L["MDP_TITLE"])
+		tooltip:AddLine(L["LEFT_CLICK"])
+		tooltip:AddLine(L["RIGHT_CLICK"])
 	end,
 })
 

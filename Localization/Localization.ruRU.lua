@@ -1,5 +1,7 @@
 local L = select(2, ...).L('ruRU')
 
+L["MDP_TITLE"] = "Mythic Dungeon Portals"
+
 -- Дополнения
 L["Cataclysm"] = "Катаклизм"
 L["Mists of Pandaria"] = "Туманы Пандарии"
@@ -72,8 +74,8 @@ L["DUNGEON_GRIM_BATOL"] = "Грим Батол"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Осада Боралуса"
 
 -- Настройки
-L["Left click to open Portals"] = "ЛКМ - открыть список порталов"
-L["Right click to open settings"] = "ПКМ - открыть настройки"
-L["Show/Hide Backgrounds"] = "Показать/скрыть фон"
-L["Show/Hide Minimap Icon"] = "Показать/скрыть иконку миникарты"
-L["Mythic Dungeon Portals Settings"] = "Настройки Mythic Dungeon Portals"
+L["LEFT_CLICK"] = "ЛКМ - открыть список порталов"
+L["RIGHT_CLICK"] = "ПКМ - открыть настройки"
+L["SHOW_BACKGROUNDS"] = "Показать/скрыть фон"
+L["SHOW_MINIMAP"] = "Показать/скрыть иконку миникарты"
+L["SETTINGS_TITLE"] = "Настройки Mythic Dungeon Portals"

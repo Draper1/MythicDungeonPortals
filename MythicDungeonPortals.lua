@@ -1,6 +1,7 @@
 -- MythicDungeonPortals.lua
 local addonName, addon = ...
 local constants = addon.constants
+local L = addon.L
 
 local currentTab = nil
 local totalTabs = 0
@@ -23,7 +24,7 @@ MDPFrame.background:Hide() -- Initially hide the background
 MDPFrame.title = MDPFrame:CreateFontString(nil, "OVERLAY")
 MDPFrame.title:SetFontObject("GameFontHighlight")
 MDPFrame.title:SetPoint("CENTER", MDPFrame.TitleBg, "CENTER")
-MDPFrame.title:SetText("Mythic Dungeon Portals")
+MDPFrame.title:SetText(L["MDP_TITLE"])
 MDPFrame.TitleBg:SetColorTexture(0, 0, 0)  -- RGB for black
 
 local contentFrames = {}

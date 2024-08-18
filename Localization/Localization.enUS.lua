@@ -1,5 +1,7 @@
 local L = select(2, ...).L('enUS')
 
+L["MDP_TITLE"] = "Mythic Dungeon Portals"
+
 -- Expansions
 L["Cataclysm"] = "Cataclysm"
 L["Mists of Pandaria"] = "Mists of Pandaria"
@@ -72,8 +74,8 @@ L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Seige of Boralus"
 
 -- Settings
-L["Left click to open Portals"] = "Left click to open Portals"
-L["Right click to open settings"] = "Right click to open settings"
-L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
-L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
-L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
+L["LEFT_CLICK"] = "Left click to open Portals"
+L["RIGHT_CLICK"] = "Right click to open settings"
+L["SHOW_BACKGROUNDS"] = "Show/Hide Backgrounds"
+L["SHOW_MINIMAP"] = "Show/Hide Minimap Icon"
+L["SETTINGS_TITLE"] = "Mythic Dungeon Portals Settings"

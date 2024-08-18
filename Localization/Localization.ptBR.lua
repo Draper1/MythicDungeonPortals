@@ -1,5 +1,7 @@
 local L = select(2, ...).L('ptBR')
 
+L["MDP_TITLE"] = "Portais de Masmorras Míticas"
+
 -- Expansões
 L["Cataclysm"] = "Cataclysm"
 L["Mists of Pandaria"] = "Mists of Pandaria"
@@ -72,8 +74,8 @@ L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Assédio a Boralus"
 
 -- Settings
-L["Left click to open Portals"] = "Left click to open Portals"
-L["Right click to open settings"] = "Right click to open settings"
-L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
-L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
-L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
+L["LEFT_CLICK"] = "Clique esquerdo para abrir portais"
+L["RIGHT_CLICK"] = "Clique direito para abrir configurações"
+L["SHOW_BACKGROUNDS"] = "Mostrar/Ocultar Fundos"
+L["SHOW_MINIMAP"] = "Mostrar/Ocultar Ícone do Minimapa"
+L["SETTINGS_TITLE"] = "Configurações dos Portais de Masmorras Míticas"

@@ -1,5 +1,7 @@
 local L = select(2, ...).L('itIT')
 
+L["MDP_TITLE"] = "Portali Spedizioni Mitiche"
+
 -- Espansioni
 L["Cataclysm"] = "Cataclysm"
 L["Mists of Pandaria"] = "Mists of Pandaria"
@@ -72,8 +74,8 @@ L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Assedio di Boralus"
 
 -- Settings
-L["Left click to open Portals"] = "Left click to open Portals"
-L["Right click to open settings"] = "Right click to open settings"
-L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
-L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
-L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
+L["SETTINGS_TITLE"] = "Impostazioni Portali Spedizioni Mitiche"
+L["LEFT_CLICK"] = "Clicca sinistro per aprire i portali"
+L["RIGHT_CLICK"] = "Clicca destro per aprire le impostazioni"
+L["SHOW_BACKGROUNDS"] = "Mostra/Nascondi Sfondi"
+L["SHOW_MINIMAP"] = "Mostra/Nascondi Icona Minimappa"
