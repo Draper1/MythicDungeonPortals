@@ -1,5 +1,7 @@
 local L = select(2, ...).L('esMX')
 
+L["MDP_TITLE"] = "Portales de Mazmorras Míticas"
+
 -- Expansiones
 L["Cataclysm"] = "Cataclismo"
 L["Mists of Pandaria"] = "Mists of Pandaria"
@@ -68,10 +70,12 @@ L["DUNGEON_THE_ROOKERY"] = "La Aviario"
 L["DUNGEON_DARKFLAME_CLEFT"] = "Hendidura Llamaoscura"
 L["DUNGEON_CINDERBREW_BREWERY"] = "Cervecería Cenizafermento"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priorato de la Llama Sagrada"
+L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "Asedio de Boralus"
 
 -- Settings
-L["Left click to open Portals"] = "Left click to open Portals"
-L["Right click to open settings"] = "Right click to open settings"
-L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
-L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
-L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
+L["LEFT_CLICK"] = "Clic izquierdo para abrir los portales"
+L["RIGHT_CLICK"] = "Clic derecho para abrir la configuración"
+L["SHOW_BACKGROUNDS"] = "Mostrar/Ocultar Fondos"
+L["SHOW_MINIMAP"] = "Mostrar/Ocultar Icono del Minimapa"
+L["SETTINGS_TITLE"] = "Configuración de los Portales de Mazmorras Míticas"

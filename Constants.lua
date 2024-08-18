@@ -29,11 +29,11 @@ local orderedExpansions = {
 
 local mapExpansionToMapID = {
     [L["Current Season"]] = {399, 400, 401, 402, 403, 404, 405, 406},
-    [L["Cataclysm"]] = {438, 456},
+    [L["Cataclysm"]] = {438, 456, 508},
     [L["Mists of Pandaria"]] = {3, 4, 5, 6, 7, 8, 9, 10, 2},
     [L["Warlords of Draenor"]] = {168, 169, 170, 171, 172, 173, 174, 165},
     [L["Legion"]] = {198, 199, 200, 206, 210, 211},
-    [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252},
+    [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252, 509},
     [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308},
     [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463},
     [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507}
@@ -97,8 +97,7 @@ local mapIDtoSpellID = {
     [506] = 445440, -- Cinderbrew Brewery
     [507] = 445444, -- Priory of the Sacred Flame
     [508] = 445424, -- Grim Batol
-    [509] = 445418, -- Seige of Boralus (Alliance)
-    [510] = 464256, -- Seige of Boralus (Horde)
+    [509] = 0, -- Siege of Boralus (Zero used as a placeholder, since we need to set alliance or horde spell IDs)
 };
 
 local mapIDtoDungeonName = {
@@ -158,6 +157,8 @@ local mapIDtoDungeonName = {
     [505] = L['DUNGEON_DARKFLAME_CLEFT'],
     [506] = L['DUNGEON_CINDERBREW_BREWERY'],
     [507] = L['DUNGEON_PRIORY_OF_THE_SACRED_FLAME'],
+    [508] = L["DUNGEON_GRIM_BATOL"],
+    [509] = L["DUNGEON_SEIGE_OF_BORALUS"],
 }
 
 

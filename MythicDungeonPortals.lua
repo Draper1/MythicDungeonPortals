@@ -1,6 +1,7 @@
 -- MythicDungeonPortals.lua
 local addonName, addon = ...
 local constants = addon.constants
+local L = addon.L
 
 local currentTab = nil
 local totalTabs = 0
@@ -23,7 +24,7 @@ MDPFrame.background:Hide() -- Initially hide the background
 MDPFrame.title = MDPFrame:CreateFontString(nil, "OVERLAY")
 MDPFrame.title:SetFontObject("GameFontHighlight")
 MDPFrame.title:SetPoint("CENTER", MDPFrame.TitleBg, "CENTER")
-MDPFrame.title:SetText("Mythic Dungeon Portals")
+MDPFrame.title:SetText(L["MDP_TITLE"])
 MDPFrame.TitleBg:SetColorTexture(0, 0, 0)  -- RGB for black
 
 local contentFrames = {}
@@ -68,12 +69,16 @@ local function AddSpellIcons(tabFrame, mapIDs)
                 CooldownFrame_Set(cooldown, start, duration, enable)
             end
 
+            -- Make the button movable
+            button:SetMovable(true)
+
             -- Check if the spell is learned
             if not HasLearnedSpell(spellID) then
                 icon:SetDesaturated(true)
                 button:Disable()
             else
                 button:RegisterForClicks("LeftButtonUp", "LeftButtonDown")
+                button:RegisterForDrag("RightButton") -- todo: fix drag left button conflict
                 button:SetAttribute("type", "spell")
                 button:SetAttribute("unit", "player")
                 button:SetAttribute("spell", spellID)
@@ -82,6 +87,16 @@ local function AddSpellIcons(tabFrame, mapIDs)
 
             button:RegisterEvent("SPELL_UPDATE_COOLDOWN")
             button:SetScript("OnEvent", UpdateCooldown)
+
+            -- Allow spell to be dragged to action bar
+            button:SetScript("OnDragStart", function(self)
+                if IsShiftKeyDown() then
+                    C_Spell.PickupSpell(spellID)
+                end
+            end)
+            button:SetScript("OnReceiveDrag", function(self)
+                C_Spell.PlaceAction(self:GetID())
+            end)
 
             button:SetScript("OnEnter", function(self)
                 GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -98,7 +113,6 @@ local function AddSpellIcons(tabFrame, mapIDs)
         end
     end
 end
-
 
 local function UpdateMDPTabs(selectedTabName)
     for name, tabFrame in pairs(contentFrames) do
@@ -161,6 +175,15 @@ function MythicDungeonPortals:UpdateBackgroundVisibility()
 end
 
 local function InitializeTabs()
+    -- first check if character is alliance or horde
+    -- override alliance and horde specific spells
+    local faction = UnitFactionGroup("player")
+    if faction == "Alliance" then
+        constants.mapIDtoSpellID[509] = 445418
+    elseif faction == "Horde" then
+        constants.mapIDtoSpellID[509] = 464256
+    end
+
     for _, expansion in ipairs(constants.orderedExpansions) do
         local mapIDs = constants.mapExpansionToMapID[expansion]
         if mapIDs then

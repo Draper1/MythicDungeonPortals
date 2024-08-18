@@ -1,5 +1,7 @@
 local L = select(2, ...).L('koKR')
 
+L["MDP_TITLE"] = "신화 던전 포탈"
+
 -- 확장팩
 L["Cataclysm"] = "대격변"
 L["Mists of Pandaria"] = "판다리아의 안개"
@@ -68,10 +70,12 @@ L["DUNGEON_THE_ROOKERY"] = "마루"
 L["DUNGEON_DARKFLAME_CLEFT"] = "어둠불 근처"
 L["DUNGEON_CINDERBREW_BREWERY"] = "잿빛 양조장"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "신성한 불길 수도원"
+L["DUNGEON_GRIM_BATOL"] = "그림 바톨"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "보랄러스 공성전"
 
 -- Settings
-L["Left click to open Portals"] = "Left click to open Portals"
-L["Right click to open settings"] = "Right click to open settings"
-L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
-L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
-L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
+L["LEFT_CLICK"] = "왼쪽 클릭으로 포탈 열기"
+L["RIGHT_CLICK"] = "오른쪽 클릭으로 설정 열기"
+L["SHOW_BACKGROUNDS"] = "배경 표시/숨기기"
+L["SHOW_MINIMAP"] = "미니맵 아이콘 표시/숨기기"
+L["SETTINGS_TITLE"] = "신화 던전 포탈 설정"

@@ -1,5 +1,7 @@
 local L = select(2, ...).L('zhTW')
 
+L["MDP_TITLE"] = "史诗地下城传送门"
+
 -- Expansions
 L["Cataclysm"] = "大災變"
 L["Mists of Pandaria"] = "潘達利亞之謎"
@@ -68,10 +70,12 @@ L["DUNGEON_THE_ROOKERY"] = "烏鴉之巢"
 L["DUNGEON_DARKFLAME_CLEFT"] = "暗焰裂口"
 L["DUNGEON_CINDERBREW_BREWERY"] = "灰燼釀酒廠"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "聖焰修道院"
+L["DUNGEON_GRIM_BATOL"] = "格瑞姆巴托"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "围攻伯拉勒斯"
 
 -- Settings
-L["Left click to open Portals"] = "Left click to open Portals"
-L["Right click to open settings"] = "Right click to open settings"
-L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
-L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
-L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
+L["LEFT_CLICK"] = "左键点击打开传送门"
+L["RIGHT_CLICK"] = "右键点击打开设置"
+L["SHOW_BACKGROUNDS"] = "显示/隐藏背景"
+L["SHOW_MINIMAP"] = "显示/隐藏小地图图标"
+L["SETTINGS_TITLE"] = "史诗地下城传送门设置"

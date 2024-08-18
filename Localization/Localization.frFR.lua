@@ -1,5 +1,7 @@
 local L = select(2, ...).L('frFR')
 
+L["MDP_TITLE"] = "Portails de donjon mythique"
+
 -- Extensions
 L["Cataclysm"] = "Cataclysme"
 L["Mists of Pandaria"] = "Mists of Pandaria"
@@ -68,10 +70,12 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Brasserie Cendrée"
 L["DUNGEON_DARKFLAME_CLEFT"] = "Faille de la Flamme sombre"
 L["DUNGEON_THE_ROOKERY"] = "La Volière"
 L["DUNGEON_DAWNBREAKER"] = "Brise-aube"
+L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "Siège de Boralus"
 
 -- Settings
-L["Left click to open Portals"] = "Left click to open Portals"
-L["Right click to open settings"] = "Right click to open settings"
-L["Show/Hide Backgrounds"] = "Show/Hide Backgrounds"
-L["Show/Hide Minimap Icon"] = "Show/Hide Minimap Icon"
-L["Mythic Dungeon Portals Settings"] = "Mythic Dungeon Portals Settings"
+L["LEFT_CLICK"] = "Clic gauche pour ouvrir les portails"
+L["RIGHT_CLICK"] = "Clic droit pour ouvrir les paramètres"
+L["SHOW_BACKGROUNDS"] = "Afficher/Masquer les arrière-plans"
+L["SHOW_MINIMAP"] = "Afficher/Masquer l'icône de la minicarte"
+L["SETTINGS_TITLE"] = "Paramètres des portails de donjon mythique"
