@@ -68,6 +68,8 @@ L["DUNGEON_THE_ROOKERY"] = "Гнездовье"
 L["DUNGEON_DARKFLAME_CLEFT"] = "Расселина Темного Пламени"
 L["DUNGEON_CINDERBREW_BREWERY"] = "Искроварня"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Приорат Священного Пламени"
+L["DUNGEON_GRIM_BATOL"] = "Грим Батол"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "Осада Боралуса"
 
 -- Настройки
 L["Left click to open Portals"] = "ЛКМ - открыть список порталов"

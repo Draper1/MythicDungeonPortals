@@ -68,6 +68,8 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Brasserie Cendrée"
 L["DUNGEON_DARKFLAME_CLEFT"] = "Faille de la Flamme sombre"
 L["DUNGEON_THE_ROOKERY"] = "La Volière"
 L["DUNGEON_DAWNBREAKER"] = "Brise-aube"
+L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "Siège de Boralus"
 
 -- Settings
 L["Left click to open Portals"] = "Left click to open Portals"

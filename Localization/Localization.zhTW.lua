@@ -68,6 +68,8 @@ L["DUNGEON_THE_ROOKERY"] = "烏鴉之巢"
 L["DUNGEON_DARKFLAME_CLEFT"] = "暗焰裂口"
 L["DUNGEON_CINDERBREW_BREWERY"] = "灰燼釀酒廠"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "聖焰修道院"
+L["DUNGEON_GRIM_BATOL"] = "格瑞姆巴托"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "围攻伯拉勒斯"
 
 -- Settings
 L["Left click to open Portals"] = "Left click to open Portals"

@@ -161,6 +161,15 @@ function MythicDungeonPortals:UpdateBackgroundVisibility()
 end
 
 local function InitializeTabs()
+    -- first check if character is alliance or horde
+    -- override alliance and horde specific spells
+    local faction = UnitFactionGroup("player")
+    if faction == "Alliance" then
+        constants.mapIDtoSpellID[509] = 445418
+    elseif faction == "Horde" then
+        constants.mapIDtoSpellID[509] = 464256
+    end
+
     for _, expansion in ipairs(constants.orderedExpansions) do
         local mapIDs = constants.mapExpansionToMapID[expansion]
         if mapIDs then

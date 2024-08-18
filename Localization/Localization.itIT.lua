@@ -68,6 +68,8 @@ L["DUNGEON_THE_ROOKERY"] = "Il Nido"
 L["DUNGEON_DARKFLAME_CLEFT"] = "Fenditura Fiammanera"
 L["DUNGEON_CINDERBREW_BREWERY"] = "Birrificio Cenerefermento"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priorato della Fiamma Sacra"
+L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
+L["DUNGEON_SEIGE_OF_BORALUS"] = "Assedio di Boralus"
 
 -- Settings
 L["Left click to open Portals"] = "Left click to open Portals"
