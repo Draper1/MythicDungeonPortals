@@ -8,7 +8,7 @@ local totalTabs = 0
 
 local MDPFrame = CreateFrame("Frame", "MDPFrame", UIParent, "BasicFrameTemplate")
 
-MDPFrame:SetSize(350, 500)
+MDPFrame:SetSize(400, 600)
 MDPFrame:SetPoint("CENTER")
 MDPFrame:SetMovable(true)
 MDPFrame:EnableMouse(true)
