@@ -200,10 +200,6 @@ local function ToggleFrame()
     end
 end
 
-local function SlashCmdHandler(msg, editbox)
-    ToggleFrame()
-end
-
 MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
     if event == "ADDON_LOADED" and addonNameLoaded == addonName then
         MythicDungeonPortals:OnInitialize()

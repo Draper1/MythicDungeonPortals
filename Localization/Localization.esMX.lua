@@ -73,6 +73,14 @@ L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priorato de la Llama Sagrada"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Asedio de Boralus"
 
+-- Raids
+L["RAID_VAULT_OF_THE_INCARNATES"] = "Bóveda de los Encarnados"
+L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"] = "Aberrus, el Crisol Sombrío"
+L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Amirdrassil, la Esperanza del Sueño"
+L["RAID_CASTLE_NATHRIA"] = "Castillo Nathria"
+L["RAID_SANCTUM_OF_DOMINATION"] = "Sagrario de Dominación"
+L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepulcro de los Primeros"
+
 -- Settings
 L["LEFT_CLICK"] = "Clic izquierdo para abrir los portales"
 L["RIGHT_CLICK"] = "Clic derecho para abrir la configuración"

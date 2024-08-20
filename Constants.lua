@@ -34,8 +34,8 @@ local mapExpansionToMapID = {
     [L["Warlords of Draenor"]] = {168, 169, 170, 171, 172, 173, 174, 165},
     [L["Legion"]] = {198, 199, 200, 206, 210, 211},
     [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252, 509},
-    [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308},
-    [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463},
+    [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308, 1003, 1004, 1005},
+    [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463, 1000, 1001, 1002},
     [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507}
 }
 
@@ -98,6 +98,12 @@ local mapIDtoSpellID = {
     [507] = 445444, -- Priory of the Sacred Flame
     [508] = 445424, -- Grim Batol
     [509] = 0, -- Siege of Boralus (Zero used as a placeholder, since we need to set alliance or horde spell IDs)
+    [1000] = 432254, -- Vault of the Incarnates
+    [1001] = 432257, -- Abberus, the Shadowed Crucible
+    [1002] = 432258, -- Amirdrassil, the Dream's Hope
+    [1003] = 373190, -- Castle Nathria
+    [1004] = 373191, -- Sanctum of Domination
+    [1005] = 373192, -- Sepulcher of the First Ones
 };
 
 local mapIDtoDungeonName = {
@@ -159,8 +165,13 @@ local mapIDtoDungeonName = {
     [507] = L['DUNGEON_PRIORY_OF_THE_SACRED_FLAME'],
     [508] = L["DUNGEON_GRIM_BATOL"],
     [509] = L["DUNGEON_SEIGE_OF_BORALUS"],
+    [1000] = L["RAID_VAULT_OF_THE_INCARNATES"],
+    [1001] = L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"],
+    [1002] = L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"],
+    [1003] = L["RAID_CASTLE_NATHRIA"],
+    [1004] = L["RAID_SANCTUM_OF_DOMINATION"],
+    [1005] = L["RAID_SEPULCHER_OF_THE_FIRST_ONES"],
 }
-
 
 local mapExpansionToBackground = {
     [L["Cataclysm"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\Cata.tga",

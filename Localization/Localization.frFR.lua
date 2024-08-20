@@ -73,6 +73,14 @@ L["DUNGEON_DAWNBREAKER"] = "Brise-aube"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Siège de Boralus"
 
+-- Raids
+L["RAID_VAULT_OF_THE_INCARNATES"] = "Caveau des Incarnations"
+L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"] = "Aberrus, le Creuset Ombreux"
+L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Amirdrassil, l’Espoir du Rêve"
+L["RAID_CASTLE_NATHRIA"] = "Château Nathria"
+L["RAID_SANCTUM_OF_DOMINATION"] = "Sanctum de Domination"
+L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sépulcre des Fondateurs"
+
 -- Settings
 L["LEFT_CLICK"] = "Clic gauche pour ouvrir les portails"
 L["RIGHT_CLICK"] = "Clic droit pour ouvrir les paramètres"

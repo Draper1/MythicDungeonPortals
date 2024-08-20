@@ -73,6 +73,14 @@ L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priorat der Heiligen Flamme"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Seeschlacht von Boralus"
 
+-- Raids
+L["RAID_VAULT_OF_THE_INCARNATES"] = "Gewölbe der Inkarnationen"
+L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"] = "Aberrus, der Schattenkessel"
+L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Amirdrassil, die Hoffnung des Traums"
+L["RAID_CASTLE_NATHRIA"] = "Schloss Nathria"
+L["RAID_SANCTUM_OF_DOMINATION"] = "Sanktum der Domination"
+L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepulcher der Ersten"
+
 -- Settings
 L["SETTINGS_TITLE"] = "Mythic Dungeon Portale Einstellungen"
 L["LEFT_CLICK"] = "Linksklick um Portale zu öffnen"
