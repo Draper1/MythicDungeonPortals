@@ -4,7 +4,7 @@
 ## Notes: Easy UI for quickly finding the mythic dungeon portals
 ## Notes-ruRU: Простой аддон для быстрого поиска порталов в М+ подземелья
 ## Author: Andrew Draper
-## Version: 1.12
+## Version: 1.13
 ## X-Curse-Project-ID: 960519
 ## SavedVariables: MythicDungeonPortalsSettings
 
