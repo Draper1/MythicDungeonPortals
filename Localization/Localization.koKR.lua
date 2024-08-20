@@ -73,6 +73,14 @@ L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "신성한 불길 수도원"
 L["DUNGEON_GRIM_BATOL"] = "그림 바톨"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "보랄러스 공성전"
 
+-- Raids
+L["RAID_VAULT_OF_THE_INCARNATES"] = "현신의 금고"
+L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"] = "어버러스, 암흑의 도가니"
+L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "아미르드라실, 꿈의 희망"
+L["RAID_CASTLE_NATHRIA"] = "나스리아 성채"
+L["RAID_SANCTUM_OF_DOMINATION"] = "지배의 성소"
+L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "초월자의 묘지"
+
 -- Settings
 L["LEFT_CLICK"] = "왼쪽 클릭으로 포탈 열기"
 L["RIGHT_CLICK"] = "오른쪽 클릭으로 설정 열기"

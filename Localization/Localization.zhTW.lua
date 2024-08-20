@@ -73,6 +73,14 @@ L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "聖焰修道院"
 L["DUNGEON_GRIM_BATOL"] = "格瑞姆巴托"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "围攻伯拉勒斯"
 
+-- Raids
+L["RAID_VAULT_OF_THE_INCARNATES"] = "化身寶庫"
+L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"] = "亞貝魯斯，暗影熔爐"
+L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "艾米德拉希爾，夢境之望"
+L["RAID_CASTLE_NATHRIA"] = "納斯利亞堡"
+L["RAID_SANCTUM_OF_DOMINATION"] = "統御聖所"
+L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "初誕者聖墓"
+
 -- Settings
 L["LEFT_CLICK"] = "左键点击打开传送门"
 L["RIGHT_CLICK"] = "右键点击打开设置"
