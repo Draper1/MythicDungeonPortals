@@ -73,13 +73,13 @@ L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Приорат Священного �
 L["DUNGEON_GRIM_BATOL"] = "Грим Батол"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Осада Боралуса"
 
--- Raids
+-- Рейды
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Хранилище Воплощений"
-L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"] = "Аббер, Темный Горн"
+L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"] = "Аберрий, Затененное Горнило"
 L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Амирдрассил, Надежда Сна"
 L["RAID_CASTLE_NATHRIA"] = "Замок Нафрия"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Святилище Господства"
-L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Гробница Первых"
+L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Гробница Предвечных"
 
 -- Настройки
 L["LEFT_CLICK"] = "ЛКМ - открыть список порталов"
