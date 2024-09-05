@@ -28,7 +28,7 @@ local orderedExpansions = {
 }
 
 local mapExpansionToMapID = {
-    [L["Current Season"]] = {399, 400, 401, 402, 403, 404, 405, 406},
+    [L["Current Season"]] = {500, 501, 502, 503, 300, 302, 509, 508},
     [L["Cataclysm"]] = {438, 456, 508},
     [L["Mists of Pandaria"]] = {3, 4, 5, 6, 7, 8, 9, 10, 2},
     [L["Warlords of Draenor"]] = {168, 169, 170, 171, 172, 173, 174, 165},
