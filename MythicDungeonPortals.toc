@@ -1,4 +1,4 @@
-## Interface: 110002
+## Interface: 110007, 110100
 ## Title: Mythic Dungeon Portals
 ## Title-ruRU: Порталы М+ подземелий
 ## Notes: Easy UI for quickly finding the mythic dungeon portals
