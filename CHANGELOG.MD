@@ -28,3 +28,9 @@ v1.12.0 Fix LUA Translation Keys, Add Drag/Drop support, add missing dungeons, a
 v1.13.0 Add Awakened Raid Spell IDs, Increase Window size, remove duplicate function
 
 v1.14.0 Add Season 1 portals, fix Russian translations, thanks to: [Hollicsh](https://github.com/Hollicsh)
+
+v1.15.0 Fix bugs
+
+v1.16.0 Fix translations
+
+v1.17.0 Add Season 2 portals for dungeons and raids. Bump version.

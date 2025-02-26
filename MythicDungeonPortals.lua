@@ -19,7 +19,7 @@ MDPFrame:SetScript("OnDragStop", MDPFrame.StopMovingOrSizing)
 
 MDPFrame.background = MDPFrame:CreateTexture(nil, "BACKGROUND")
 MDPFrame.background:SetAllPoints(MDPFrame)
-MDPFrame.background:Hide() -- Initially hide the background
+MDPFrame.background:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock")
 
 MDPFrame.title = MDPFrame:CreateFontString(nil, "OVERLAY")
 MDPFrame.title:SetFontObject("GameFontHighlight")
@@ -28,6 +28,17 @@ MDPFrame.title:SetText(L["MDP_TITLE"])
 MDPFrame.TitleBg:SetColorTexture(0, 0, 0)  -- RGB for black
 
 local contentFrames = {}
+local tabButtons = {}
+
+local function UpdateTabButtonStates(selectedExpansion)
+    for expansion, button in pairs(tabButtons) do
+        if expansion == selectedExpansion then
+            button:LockHighlight()  -- visually indicates active button
+        else
+            button:UnlockHighlight()
+        end
+    end
+end
 
 local function HasLearnedSpell(spellID)
     return IsSpellKnown(spellID)
@@ -125,53 +136,41 @@ local function UpdateMDPTabs(selectedTabName)
     currentTab = selectedTabName
 end
 
-local function UpdateFrameBackground(selectedTabName)
-    local texturePath = constants.mapExpansionToBackground[selectedTabName]
-    if texturePath and MythicDungeonPortalsSettings.BackgroundVisible then
-        MDPFrame.background:SetTexture(texturePath)
-        MDPFrame.background:Show()
-    else
-        MDPFrame.background:Hide()
-    end
-end
-
 -- Function to create tabs
 local function CreateTab(expansionName, mapIDs)
     local topPadding = 30
     totalTabs = totalTabs + 1
-    local tabButton = CreateFrame("Button", "TabButtons", MDPFrame, "UIPanelButtonTemplate")
-
+    local tabButton = CreateFrame("Button", nil, MDPFrame, "UIPanelButtonTemplate")
+    
     tabButton:SetSize(120, 30)
     tabButton:SetPoint("TOPRIGHT", MDPFrame, "TOPRIGHT", -20, -(topPadding + (totalTabs - 1) * 30))
     tabButton:SetText(expansionName)
     tabButton:SetNormalFontObject("GameFontNormal")
     tabButton:SetHighlightFontObject("GameFontHighlight")
+    
+    tabButtons[expansionName] = tabButton
 
-    local tabFrame = CreateFrame("Frame", "TabFrame", MDPFrame)
+    local tabFrame = CreateFrame("Frame", nil, MDPFrame)
     tabFrame:SetAllPoints()
     tabFrame:Hide()
-
+    
     contentFrames[expansionName] = tabFrame
     AddSpellIcons(tabFrame, mapIDs)
-
+    
     -- Event handler for tab click
     tabButton:SetScript("OnClick", function()
         UpdateMDPTabs(expansionName)
-        UpdateFrameBackground(expansionName)
+        UpdateTabButtonStates(expansionName)
     end)
-
-    -- Initially show content of the first tab
+    
+    -- Initially show content of the first tab and mark its button active
     if totalTabs == 1 then
         UpdateMDPTabs(expansionName)
-        UpdateFrameBackground(expansionName)
+        UpdateTabButtonStates(expansionName)
     end
     if constants.debugMode == true then
         print("Tab created for " .. expansionName)
     end
-end
-
-function MythicDungeonPortals:UpdateBackgroundVisibility()
-    UpdateFrameBackground(currentTab)
 end
 
 local function InitializeTabs()

@@ -72,6 +72,8 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Birrificio Cenerefermento"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priorato della Fiamma Sacra"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Assedio di Boralus"
+L["DUNGEON_THE_MOTHERLOAD"] = "La vena madre"
+L["DUNGEON_OPERATION_FLOODGATE"] = "Operazione: Chiusa"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Volta degli Incarnati"
@@ -80,6 +82,7 @@ L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Amirdrassil, la Speranza del Sogno"
 L["RAID_CASTLE_NATHRIA"] = "Castello di Nathria"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Santuario del Dominio"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepolcro dei Primi"
+L["RAID_LIBERATION_OF_UNDERMINE"] = "Liberazione della Sottominiera"
 
 -- Settings
 L["SETTINGS_TITLE"] = "Impostazioni Portali Spedizioni Mitiche"

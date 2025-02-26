@@ -28,15 +28,15 @@ local orderedExpansions = {
 }
 
 local mapExpansionToMapID = {
-    [L["Current Season"]] = {500, 501, 502, 503, 300, 302, 509, 508},
+    [L["Current Season"]] = {252, 305, 504, 505, 506, 507, 510, 511, 1006},
     [L["Cataclysm"]] = {438, 456, 508},
     [L["Mists of Pandaria"]] = {3, 4, 5, 6, 7, 8, 9, 10, 2},
     [L["Warlords of Draenor"]] = {168, 169, 170, 171, 172, 173, 174, 165},
     [L["Legion"]] = {198, 199, 200, 206, 210, 211},
-    [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252, 509},
+    [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252, 509, 510},
     [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308, 1003, 1004, 1005},
     [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463, 1000, 1001, 1002},
-    [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507}
+    [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507, 511, 1006}
 }
 
 local mapIDtoSpellID = {
@@ -98,12 +98,15 @@ local mapIDtoSpellID = {
     [507] = 445444, -- Priory of the Sacred Flame
     [508] = 445424, -- Grim Batol
     [509] = 0, -- Siege of Boralus (Zero used as a placeholder, since we need to set alliance or horde spell IDs)
+    [510] = 467553, -- Motherload
+    [511] = 1216786, -- Operation: Floodgate
     [1000] = 432254, -- Vault of the Incarnates
     [1001] = 432257, -- Abberus, the Shadowed Crucible
     [1002] = 432258, -- Amirdrassil, the Dream's Hope
     [1003] = 373190, -- Castle Nathria
     [1004] = 373191, -- Sanctum of Domination
     [1005] = 373192, -- Sepulcher of the First Ones
+    [1006] = 1226482, -- Liberation of Undermine
 };
 
 local mapIDtoDungeonName = {
@@ -165,12 +168,15 @@ local mapIDtoDungeonName = {
     [507] = L['DUNGEON_PRIORY_OF_THE_SACRED_FLAME'],
     [508] = L["DUNGEON_GRIM_BATOL"],
     [509] = L["DUNGEON_SEIGE_OF_BORALUS"],
+    [510] = L["DUNGEON_THE_MOTHERLOAD"],
+    [511] = L["DUNGEON_OPERATION_FLOODGATE"],
     [1000] = L["RAID_VAULT_OF_THE_INCARNATES"],
     [1001] = L["RAID_ABBERUS_THE_SHADOWED_CRUCIBLE"],
     [1002] = L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"],
     [1003] = L["RAID_CASTLE_NATHRIA"],
     [1004] = L["RAID_SANCTUM_OF_DOMINATION"],
     [1005] = L["RAID_SEPULCHER_OF_THE_FIRST_ONES"],
+    [1006] = L["RAID_LIBERATION_OF_UNDERMINE"],
 }
 
 local mapExpansionToBackground = {

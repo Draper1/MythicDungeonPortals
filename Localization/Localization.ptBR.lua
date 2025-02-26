@@ -72,6 +72,8 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Cervejaria Cinzaferro"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priorado da Chama Sagrada"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Assédio a Boralus"
+L["DUNGEON_THE_MOTHERLOAD"] = "A Veia-Mãe"
+L["DUNGEON_OPERATION_FLOODGATE"] = "Operação: Comporta"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Cofre dos Encarnados"
@@ -80,6 +82,7 @@ L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Amirdrassil, a Esperança do Sonho"
 L["RAID_CASTLE_NATHRIA"] = "Castelo Nathria"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Santuário da Dominação"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepulcro dos Primogênitos"
+L["RAID_LIBERATION_OF_UNDERMINE"] = "Liberação da Submina"
 
 -- Settings
 L["LEFT_CLICK"] = "Clique esquerdo para abrir portais"
