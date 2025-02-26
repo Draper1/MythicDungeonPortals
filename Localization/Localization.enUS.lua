@@ -72,6 +72,8 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Cinderbrew Brewery"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priory of the Sacred Flame"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Seige of Boralus"
+L["DUNGEON_THE_MOTHERLOAD"] = "The Motherload"
+L["DUNGEON_OPERATION_FLOODGATE"] = "Operation: Floodgate"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Vault of the Incarnates"
@@ -80,6 +82,7 @@ L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Amirdrassil, the Dream's Hope"
 L["RAID_CASTLE_NATHRIA"] = "Castle Nathria"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Sanctum of Domination"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepulcher of the First Ones"
+L["RAID_LIBERATION_OF_UNDERMINE"] = "Liberation of Undermine"
 
 -- Settings
 L["LEFT_CLICK"] = "Left click to open Portals"

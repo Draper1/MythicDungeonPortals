@@ -72,6 +72,8 @@ L["DUNGEON_THE_ROOKERY"] = "La Volière"
 L["DUNGEON_DAWNBREAKER"] = "Brise-aube"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Siège de Boralus"
+L["DUNGEON_THE_MOTHERLOAD"] = "Le Grand Filon"
+L["DUNGEON_OPERATION_FLOODGATE"] = "Opération: Écluse"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Caveau des Incarnations"
@@ -80,6 +82,7 @@ L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Amirdrassil, l’Espoir du Rêve"
 L["RAID_CASTLE_NATHRIA"] = "Château Nathria"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Sanctum de Domination"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sépulcre des Fondateurs"
+L["RAID_LIBERATION_OF_UNDERMINE"] = "Libération de la Sous-Mine"
 
 -- Settings
 L["LEFT_CLICK"] = "Clic gauche pour ouvrir les portails"
