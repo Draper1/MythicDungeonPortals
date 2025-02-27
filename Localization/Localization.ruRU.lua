@@ -72,7 +72,7 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Искроварня"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Приорат Священного Пламени"
 L["DUNGEON_GRIM_BATOL"] = "Грим Батол"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Осада Боралуса"
-L["DUNGEON_THE_MOTHERLOAD"] = "Главная жилка"
+L["DUNGEON_THE_MOTHERLOAD"] = "Золотая ЖИЛА!!!"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Операция: Шлюз"
 
 -- Рейды
@@ -82,7 +82,7 @@ L["RAID_AMIRDRASSIL_THE_DREAMS_HOPE"] = "Амирдрассил, Надежда 
 L["RAID_CASTLE_NATHRIA"] = "Замок Нафрия"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Святилище Господства"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Гробница Предвечных"
-L["RAID_LIBERATION_OF_UNDERMINE"] = "Освобождение Подрыва"
+L["RAID_LIBERATION_OF_UNDERMINE"] = "Освобождение Нижней Шахты"
 
 -- Настройки
 L["LEFT_CLICK"] = "ЛКМ - открыть список порталов"
