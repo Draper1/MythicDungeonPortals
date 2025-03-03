@@ -34,3 +34,7 @@ v1.15.0 Fix bugs
 v1.16.0 Fix translations
 
 v1.17.0 Add Season 2 portals for dungeons and raids. Bump version.
+
+v1.18.0 Lib Updates, thanks to: [Hollicsh](https://github.com/Hollicsh)
+
+v1.19.0 zhCN translations fixed, thanks to [Maple Saint](https://github.com/nanjuekaien1)
