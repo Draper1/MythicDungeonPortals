@@ -5,6 +5,7 @@ local L = addon.L
 
 local currentTab = nil
 local totalTabs = 0
+local tabsCreated = false  -- flag to check if tabs are already created
 
 local MDPFrame = CreateFrame("Frame", "MDPFrame", UIParent, "BasicFrameTemplate")
 
@@ -48,7 +49,7 @@ local function AddSpellIcons(tabFrame, mapIDs)
     local buttonSize = 40 -- Size of each spell icon button
     local padding = 5    -- Padding between buttons
     local numColumns = 1 -- Number of buttons per row
-    local topPadding = 35 -- the first buttons padding from top
+    local topPadding = 35 -- the first button's padding from the top
     local leftPadding = 20 -- pad the buttons by a set 20px
     local textOffset = 5 -- Offset for the text from the button
 
@@ -174,8 +175,15 @@ local function CreateTab(expansionName, mapIDs)
 end
 
 local function InitializeTabs()
-    -- first check if character is alliance or horde
-    -- override alliance and horde specific spells
+    if tabsCreated then
+        if constants.debugMode == true then
+            print("Tabs already created; skipping initialization.")
+        end
+        return
+    end
+    tabsCreated = true
+
+    -- First check if character is Alliance or Horde
     local faction = UnitFactionGroup("player")
     if faction == "Alliance" then
         constants.mapIDtoSpellID[509] = 445418
