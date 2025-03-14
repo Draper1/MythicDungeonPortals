@@ -210,7 +210,6 @@ MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
     elseif event == "PLAYER_ENTERING_WORLD" then
         InitializeTabs()
         MDPFrame:Hide()
-        self:UnregisterEvent("PLAYER_ENTERING_WORLD")
     end
 end)
 
