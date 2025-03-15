@@ -45,6 +45,35 @@ local function HasLearnedSpell(spellID)
     return IsSpellKnown(spellID)
 end
 
+local function UpdateSpellStates(tabFrame, mapIDs)
+    -- Find all spell buttons in the tab and update their states
+    for index, mapID in ipairs(mapIDs) do
+        local spellID = constants.mapIDtoSpellID[mapID]
+        local buttonName = "MDPSpellButton_" .. mapID
+        local button = _G[buttonName]
+        
+        if button and spellID then
+            local icon = button.icon
+            if not HasLearnedSpell(spellID) then
+                icon:SetDesaturated(true)
+                button:Disable()
+            else
+                icon:SetDesaturated(false)
+                button:Enable()
+                -- Update the click/drag handlers only if they haven't been set
+                if not button.handlersSet then
+                    button:RegisterForClicks("LeftButtonUp", "LeftButtonDown")
+                    button:RegisterForDrag("RightButton")
+                    button:SetAttribute("type", "spell")
+                    button:SetAttribute("unit", "player")
+                    button:SetAttribute("spell", spellID)
+                    button.handlersSet = true
+                end
+            end
+        end
+    end
+end
+
 local function AddSpellIcons(tabFrame, mapIDs)
     local buttonSize = 40 -- Size of each spell icon button
     local padding = 5    -- Padding between buttons
@@ -57,7 +86,8 @@ local function AddSpellIcons(tabFrame, mapIDs)
         local spellID = constants.mapIDtoSpellID[mapID]
         local dungeonName = constants.mapIDtoDungeonName[mapID]
         if spellID then
-            local button = CreateFrame("Button", nil, tabFrame, "SecureActionButtonTemplate")
+            -- Create button with a static name for later reference
+            local button = CreateFrame("Button", "MDPSpellButton_" .. mapID, tabFrame, "SecureActionButtonTemplate")
             button:SetSize(buttonSize, buttonSize)
 
             -- Calculate position
@@ -71,45 +101,17 @@ local function AddSpellIcons(tabFrame, mapIDs)
             local spellTexture = C_Spell.GetSpellTexture(spellID)
             icon:SetTexture(spellTexture)
 
-            -- Create cooldown frame
+            -- Store icon reference on the button
+            button.icon = icon
+
+            -- Create cooldown and other visual elements without checking spell state
             local cooldown = CreateFrame("Cooldown", nil, button, "CooldownFrameTemplate")
             cooldown:SetAllPoints(button)
 
-            -- Update the cooldown
-            local function UpdateCooldown()
-                local start, duration, enable = C_Spell.GetSpellCooldown(spellID)
-                CooldownFrame_Set(cooldown, start, duration, enable)
-            end
-
-            -- Make the button movable
+            -- Move all spell-specific logic to UpdateSpellStates
             button:SetMovable(true)
-
-            -- Check if the spell is learned
-            if not HasLearnedSpell(spellID) then
-                icon:SetDesaturated(true)
-                button:Disable()
-            else
-                button:RegisterForClicks("LeftButtonUp", "LeftButtonDown")
-                button:RegisterForDrag("RightButton") -- todo: fix drag left button conflict
-                button:SetAttribute("type", "spell")
-                button:SetAttribute("unit", "player")
-                button:SetAttribute("spell", spellID)
-                UpdateCooldown() -- Update cooldown initially
-            end
-
-            button:RegisterEvent("SPELL_UPDATE_COOLDOWN")
-            button:SetScript("OnEvent", UpdateCooldown)
-
-            -- Allow spell to be dragged to action bar
-            button:SetScript("OnDragStart", function(self)
-                if IsShiftKeyDown() then
-                    C_Spell.PickupSpell(spellID)
-                end
-            end)
-            button:SetScript("OnReceiveDrag", function(self)
-                C_Spell.PlaceAction(self:GetID())
-            end)
-
+            
+            -- Keep the tooltip and cooldown functionality
             button:SetScript("OnEnter", function(self)
                 GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
                 GameTooltip:SetSpellByID(spellID)
@@ -175,14 +177,7 @@ local function CreateTab(expansionName, mapIDs)
 end
 
 local function InitializeTabs()
-    if tabsCreated then
-        if constants.debugMode == true then
-            print("Tabs already created; skipping initialization.")
-        end
-        return
-    end
     tabsCreated = true
-
     -- First check if character is Alliance or Horde
     local faction = UnitFactionGroup("player")
     if faction == "Alliance" then
@@ -207,6 +202,22 @@ local function ToggleFrame()
     end
 end
 
+local function BeginPlayerEnteringWorld()
+    if not tabsCreated then
+        InitializeTabs()
+    end
+    
+    -- Update spell states for all tabs
+    for expansion, tabFrame in pairs(contentFrames) do
+        local mapIDs = constants.mapExpansionToMapID[expansion]
+        if mapIDs then
+            UpdateSpellStates(tabFrame, mapIDs)
+        end
+    end
+    
+    MDPFrame:Hide()
+end
+
 MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
     if event == "ADDON_LOADED" and addonNameLoaded == addonName then
         MythicDungeonPortals:OnInitialize()
@@ -216,8 +227,7 @@ MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
             print("Mythic Dungeon Portals loaded. Waiting for player to enter the world...")
         end
     elseif event == "PLAYER_ENTERING_WORLD" then
-        InitializeTabs()
-        MDPFrame:Hide()
+        BeginPlayerEnteringWorld()
     end
 end)
 
