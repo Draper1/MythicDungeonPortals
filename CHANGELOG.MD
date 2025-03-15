@@ -38,3 +38,9 @@ v1.17.0 Add Season 2 portals for dungeons and raids. Bump version.
 v1.18.0 Lib Updates, thanks to: [Hollicsh](https://github.com/Hollicsh)
 
 v1.19.0 zhCN translations fixed, thanks to [Maple Saint](https://github.com/nanjuekaien1)
+
+v1.20.0 Fix German Translations and add pre-reqs to allow updating spells dynamically
+
+v1.21.0 Fix bug duplicating all expansion tab buttons
+
+v1.22.0 Add spell update logic so spells are learned in the addon when dungeons achievements are earned

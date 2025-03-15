@@ -1,10 +1,26 @@
 ## Interface: 110100
 ## Title: Mythic Dungeon Portals
 ## Title-ruRU: Порталы М+ подземелий
+## Title-deDE: Mythische Dungeon-Portale
+## Title-ptBR: Portais de Masmorras Míticas
+## Title-esMX: Portales de Mazmorras Míticas
+## Title-frFR: Portails des Donjons Mythiques
+## Title-itIT: Portali dei Dungeon Mitici
+## Title-koKR: 신화 던전 포털
+## Title-zhCN: 神话地下城传送门
+## Title-zhTW: 神話地城傳送門
 ## Notes: Easy UI for quickly finding the mythic dungeon portals
+## Notes-deDE: Einfache Benutzeroberfläche zum schnellen Finden der mythischen Dungeon-Portale
+## Notes-ptBR: Interface fácil para encontrar rapidamente os portais das masmorras míticas
+## Notes-esMX: Interfaz fácil para encontrar rápidamente los portales de mazmorras míticas
+## Notes-frFR: Interface simple pour trouver rapidement les portails des donjons mythiques
+## Notes-itIT: Interfaccia semplice per trovare rapidamente i portali dei dungeon mitici
+## Notes-koKR: 신화 던전 포털을 빠르게 찾을 수 있는 간단한 UI
+## Notes-zhCN: 快速查找神话地下城传送门的简单界面
+## Notes-zhTW: 快速查找神話地城傳送門的簡單介面
 ## Notes-ruRU: Простой аддон для быстрого поиска порталов в М+ подземелья
 ## Author: Andrew Draper
-## Version: 1.21
+## Version: 1.22
 ## X-Curse-Project-ID: 960519
 ## SavedVariables: MythicDungeonPortalsSettings
 ## IconTexture: 237508
