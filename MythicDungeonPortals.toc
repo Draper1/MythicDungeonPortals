@@ -38,6 +38,6 @@ Localization\Localization.zhCN.lua
 Localization\Localization.zhTW.lua
 
 Constants.lua
-MythicDungeonPortals.lua
 Settings\Settings.lua
+MythicDungeonPortals.lua
 Minimap\Minimap.lua

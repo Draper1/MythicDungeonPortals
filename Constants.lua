@@ -180,15 +180,15 @@ local mapIDtoDungeonName = {
 }
 
 local mapExpansionToBackground = {
-    [L["Cataclysm"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\Cata.tga",
-    [L["Mists of Pandaria"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\MoP.tga",
-    [L["Warlords of Draenor"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\WoD.tga",
-    [L["Legion"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\Legion.tga",
-    [L["Battle for Azeroth"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\BFA.tga",
-    [L["Shadowlands"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\Shadowlands.tga",
-    [L["Dragonflight"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\Dragonflight.tga",
-    [L["War Within"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\WarWithin.tga",
-    [L["Current Season"]] = "Interface\\AddOns\\MythicDungeonPortals\\Images\\WarWithin.tga",
+    [L["Cataclysm"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\cata.tga",
+    [L["Mists of Pandaria"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\mists.tga",
+    [L["Warlords of Draenor"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\wod.tga",
+    [L["Legion"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\legion.tga",
+    [L["Battle for Azeroth"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\bfa.tga",
+    [L["Shadowlands"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\shadowlands.tga",
+    [L["Dragonflight"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\dragonflight.tga",
+    [L["War Within"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\TWW.tga",
+    [L["Current Season"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\TWW.tga",
 }
 
 local iconPath = "Interface\\Icons\\Achievement_ChallengeMode_Gold"
