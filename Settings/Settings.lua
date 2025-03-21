@@ -22,6 +22,18 @@ function MythicDungeonPortals:CreateSettingsFrame()
     MDPSettingsFrame.title:SetText(L["SETTINGS_TITLE"])
     MDPSettingsFrame.TitleBg:SetColorTexture(0, 0, 0)
 
+    local bgCheckbox = CreateFrame("CheckButton", "BGCheckbox", MDPSettingsFrame, "UICheckButtonTemplate")
+    bgCheckbox:SetPoint("TOPLEFT", 10, -30)
+    bgCheckbox.text:SetText(L["SHOW_BACKGROUNDS"])
+    bgCheckbox:SetChecked(MythicDungeonPortalsSettings.BackgroundVisible)
+    bgCheckbox:SetScript("OnClick", function(self)
+        MythicDungeonPortalsSettings.BackgroundVisible = self:GetChecked()
+        MythicDungeonPortals:UpdateBackgroundVisibility()
+        if constants.debugMode == true then
+            print(MythicDungeonPortalsSettings.BackgroundVisible)
+        end
+    end)
+
     local minimapCheckbox = CreateFrame("CheckButton", "MinimapCheckbox", MDPSettingsFrame, "UICheckButtonTemplate")
     minimapCheckbox:SetPoint("TOPLEFT", 10, -60)
     minimapCheckbox.text:SetText(L["SHOW_MINIMAP"])

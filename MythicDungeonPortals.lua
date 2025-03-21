@@ -20,7 +20,26 @@ MDPFrame:SetScript("OnDragStop", MDPFrame.StopMovingOrSizing)
 
 MDPFrame.background = MDPFrame:CreateTexture(nil, "BACKGROUND")
 MDPFrame.background:SetAllPoints(MDPFrame)
-MDPFrame.background:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock")
+
+local function InitializeBackground()
+    if MythicDungeonPortalsSettings and not MythicDungeonPortalsSettings.BackgroundVisible then
+        MDPFrame.background:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock")
+    end
+end
+
+local function UpdateFrameBackground(selectedTabName)
+    local texturePath = constants.mapExpansionToBackground[selectedTabName]
+    if texturePath and MythicDungeonPortalsSettings.BackgroundVisible then
+        MDPFrame.background:SetTexture(texturePath)
+        MDPFrame.background:Show()
+    else
+        MDPFrame.background:Hide()
+    end
+end
+
+function MythicDungeonPortals:UpdateBackgroundVisibility()
+    UpdateFrameBackground(currentTab)
+end
 
 MDPFrame.title = MDPFrame:CreateFontString(nil, "OVERLAY")
 MDPFrame.title:SetFontObject("GameFontHighlight")
@@ -164,12 +183,14 @@ local function CreateTab(expansionName, mapIDs)
     tabButton:SetScript("OnClick", function()
         UpdateMDPTabs(expansionName)
         UpdateTabButtonStates(expansionName)
+        UpdateFrameBackground(expansionName)
     end)
     
     -- Initially show content of the first tab and mark its button active
     if totalTabs == 1 then
         UpdateMDPTabs(expansionName)
         UpdateTabButtonStates(expansionName)
+        UpdateFrameBackground(expansionName)
     end
     if constants.debugMode == true then
         print("Tab created for " .. expansionName)
@@ -223,6 +244,7 @@ MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
         MythicDungeonPortals:OnInitialize()
         MythicDungeonPortals:InitializeMinimap()
         MythicDungeonPortals:CreateSettingsFrame()
+        InitializeBackground()  -- Initialize background after settings are loaded
         if constants.debugMode == true then
             print("Mythic Dungeon Portals loaded. Waiting for player to enter the world...")
         end

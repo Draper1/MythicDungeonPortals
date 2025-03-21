@@ -44,3 +44,5 @@ v1.20.0 Fix German Translations and add pre-reqs to allow updating spells dynami
 v1.21.0 Fix bug duplicating all expansion tab buttons
 
 v1.22.0 Add spell update logic so spells are learned in the addon when dungeons achievements are earned
+
+v1.23.0 Reintroduce backgrounds
