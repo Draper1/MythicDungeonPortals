@@ -202,9 +202,11 @@ local function InitializeTabs()
     -- First check if character is Alliance or Horde
     local faction = UnitFactionGroup("player")
     if faction == "Alliance" then
-        constants.mapIDtoSpellID[509] = 445418
+        constants.mapIDtoSpellID[509] = 445418 -- Siege of Boralus
+        constants.mapIDtoSpellID[510] = 467553 -- Motherlode
     elseif faction == "Horde" then
-        constants.mapIDtoSpellID[509] = 464256
+        constants.mapIDtoSpellID[509] = 464256 -- Siege of Boralus
+        constants.mapIDtoSpellID[510] = 467555 -- Motherlode
     end
 
     for _, expansion in ipairs(constants.orderedExpansions) do
