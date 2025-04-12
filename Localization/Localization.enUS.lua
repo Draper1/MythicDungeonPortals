@@ -72,7 +72,7 @@ L["DUNGEON_CINDERBREW_BREWERY"] = "Cinderbrew Brewery"
 L["DUNGEON_PRIORY_OF_THE_SACRED_FLAME"] = "Priory of the Sacred Flame"
 L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Seige of Boralus"
-L["DUNGEON_THE_MOTHERLOAD"] = "The Motherload"
+L["DUNGEON_THE_MOTHERLOAD"] = "The MOTHERLODE!!"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Operation: Floodgate"
 
 -- Raids
