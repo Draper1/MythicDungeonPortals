@@ -46,3 +46,5 @@ v1.21.0 Fix bug duplicating all expansion tab buttons
 v1.22.0 Add spell update logic so spells are learned in the addon when dungeons achievements are earned
 
 v1.23.0 Reintroduce backgrounds
+
+v1.24.0 Fix Spell IDs for duplicate portals, fix minimap DB state and release for 11.1.5

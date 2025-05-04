@@ -37,13 +37,13 @@ function MythicDungeonPortals:CreateSettingsFrame()
     local minimapCheckbox = CreateFrame("CheckButton", "MinimapCheckbox", MDPSettingsFrame, "UICheckButtonTemplate")
     minimapCheckbox:SetPoint("TOPLEFT", 10, -60)
     minimapCheckbox.text:SetText(L["SHOW_MINIMAP"])
-    minimapCheckbox:SetChecked(MythicDungeonPortalsSettings.MinimapIconVisible)
+    minimapCheckbox:SetChecked(MythicDungeonPortalsSettings.isMinimapEnabled)
     minimapCheckbox:SetScript("OnClick", function(self)
         local isChecked = self:GetChecked()
-        MythicDungeonPortalsSettings.MinimapIconVisible = isChecked
+        MythicDungeonPortalsSettings.isMinimapEnabled = isChecked
         MythicDungeonPortals:UpdateMinimapIconVisibility(isChecked)
         if constants.debugMode == true then
-            print(MythicDungeonPortalsSettings.MinimapIconVisible)
+            print(MythicDungeonPortalsSettings.isMinimapEnabled)
         end
     end)
     MDPSettingsFrame:Hide()
