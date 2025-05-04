@@ -64,11 +64,11 @@ local function HasLearnedSpell(spellID)
     return IsSpellKnown(spellID)
 end
 
-local function UpdateSpellStates(tabFrame, mapIDs)
+local function UpdateSpellStates(tabFrame, mapIDs, expansionName)
     -- Find all spell buttons in the tab and update their states
     for index, mapID in ipairs(mapIDs) do
         local spellID = constants.mapIDtoSpellID[mapID]
-        local buttonName = "MDPSpellButton_" .. mapID
+        local buttonName = "MDPSpellButton_" .. expansionName .. "_" .. mapID
         local button = _G[buttonName]
         
         if button and spellID then
@@ -93,7 +93,7 @@ local function UpdateSpellStates(tabFrame, mapIDs)
     end
 end
 
-local function AddSpellIcons(tabFrame, mapIDs)
+local function AddSpellIcons(tabFrame, mapIDs, expansionName)
     local buttonSize = 40 -- Size of each spell icon button
     local padding = 5    -- Padding between buttons
     local numColumns = 1 -- Number of buttons per row
@@ -105,8 +105,8 @@ local function AddSpellIcons(tabFrame, mapIDs)
         local spellID = constants.mapIDtoSpellID[mapID]
         local dungeonName = constants.mapIDtoDungeonName[mapID]
         if spellID then
-            -- Create button with a static name for later reference
-            local button = CreateFrame("Button", "MDPSpellButton_" .. mapID, tabFrame, "SecureActionButtonTemplate")
+            -- Create button with a unique name that includes the expansion
+            local button = CreateFrame("Button", "MDPSpellButton_" .. expansionName .. "_" .. mapID, tabFrame, "SecureActionButtonTemplate")
             button:SetSize(buttonSize, buttonSize)
 
             -- Calculate position
@@ -177,7 +177,7 @@ local function CreateTab(expansionName, mapIDs)
     tabFrame:Hide()
     
     contentFrames[expansionName] = tabFrame
-    AddSpellIcons(tabFrame, mapIDs)
+    AddSpellIcons(tabFrame, mapIDs, expansionName)
     
     -- Event handler for tab click
     tabButton:SetScript("OnClick", function()
@@ -234,7 +234,7 @@ local function BeginPlayerEnteringWorld()
     for expansion, tabFrame in pairs(contentFrames) do
         local mapIDs = constants.mapExpansionToMapID[expansion]
         if mapIDs then
-            UpdateSpellStates(tabFrame, mapIDs)
+            UpdateSpellStates(tabFrame, mapIDs, expansion)
         end
     end
     

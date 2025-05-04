@@ -1,4 +1,4 @@
-## Interface: 110100
+## Interface: 110105
 ## Title: Mythic Dungeon Portals
 ## Title-ruRU: Порталы М+ подземелий
 ## Title-deDE: Mythische Dungeon-Portale
