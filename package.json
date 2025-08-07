@@ -4,9 +4,9 @@
   "description": "A World of Warcraft addon for managing Mythic+ and Challenge Mode portals",
   "main": "MythicDungeonPortals.lua",
   "scripts": {
-    "test": "lua tests/run-tests.lua",
-    "test:watch": "nodemon --exec 'lua tests/run-tests.lua' --ext lua",
-    "test:coverage": "lua tests/run-tests.lua --coverage",
+    "test": "lua test-runner.lua",
+    "test:watch": "nodemon --exec 'lua test-runner.lua' --ext lua",
+    "test:coverage": "lua test-runner.lua --coverage",
     "lint": "luacheck . --exclude-files tests/",
     "format": "luaformatter . --exclude-files tests/"
   },
