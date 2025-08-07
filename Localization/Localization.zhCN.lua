@@ -74,6 +74,7 @@ L["DUNGEON_GRIM_BATOL"] = "格瑞姆巴托"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "围攻伯拉勒斯"
 L["DUNGEON_THE_MOTHERLOAD"] = "暴富矿区！！"
 L["DUNGEON_OPERATION_FLOODGATE"] = "水闸行动"
+L["DUNGEON_ECO_DOME_AL_DANI"] = "生态穹顶阿尔达尼"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "化身巨龙牢窟"
@@ -83,6 +84,7 @@ L["RAID_CASTLE_NATHRIA"] = "纳斯利亚堡"
 L["RAID_SANCTUM_OF_DOMINATION"] = "统御圣所"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "初诞者圣墓"
 L["RAID_LIBERATION_OF_UNDERMINE"] = "解放安德麦"
+L["RAID_MANAFORGE_OMEGA"] = "法力熔炉欧米茄"
 
 -- Settings
 L["LEFT_CLICK"] = "左键点击打开传送门"

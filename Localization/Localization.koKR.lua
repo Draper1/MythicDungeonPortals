@@ -74,6 +74,7 @@ L["DUNGEON_GRIM_BATOL"] = "그림 바톨"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "보랄러스 공성전"
 L["DUNGEON_THE_MOTHERLOAD"] = "주 광맥"
 L["DUNGEON_OPERATION_FLOODGATE"] = "작전: 수문"
+L["DUNGEON_ECO_DOME_AL_DANI"] = "에코 돔 알다니"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "현신의 금고"
@@ -83,6 +84,7 @@ L["RAID_CASTLE_NATHRIA"] = "나스리아 성채"
 L["RAID_SANCTUM_OF_DOMINATION"] = "지배의 성소"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "초월자의 묘지"
 L["RAID_LIBERATION_OF_UNDERMINE"] = "해방: 하부광산"
+L["RAID_MANAFORGE_OMEGA"] = "마나포지 오메가"
 
 -- Settings
 L["LEFT_CLICK"] = "왼쪽 클릭으로 포탈 열기"
