@@ -74,6 +74,7 @@ L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Assédio a Boralus"
 L["DUNGEON_THE_MOTHERLOAD"] = "A Veia-Mãe"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Operação: Comporta"
+L["DUNGEON_ECO_DOME_AL_DANI"] = "Eco-Cúpula Al'dani"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Cofre dos Encarnados"
@@ -83,6 +84,7 @@ L["RAID_CASTLE_NATHRIA"] = "Castelo Nathria"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Santuário da Dominação"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepulcro dos Primogênitos"
 L["RAID_LIBERATION_OF_UNDERMINE"] = "Liberação da Submina"
+L["RAID_MANAFORGE_OMEGA"] = "Forja de Mana Ômega"
 
 -- Settings
 L["LEFT_CLICK"] = "Clique esquerdo para abrir portais"

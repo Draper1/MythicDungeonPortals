@@ -74,6 +74,7 @@ L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Seeschlacht von Boralus"
 L["DUNGEON_THE_MOTHERLOAD"] = "Das RIESENFLÖZ!!"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Operation: Schleuse"
+L["DUNGEON_ECO_DOME_AL_DANI"] = "Eco-Dome Al'dani"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Gewölbe der Inkarnationen"
@@ -83,6 +84,7 @@ L["RAID_CASTLE_NATHRIA"] = "Schloss Nathria"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Sanktum der Domination"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepulcher der Ersten"
 L["RAID_LIBERATION_OF_UNDERMINE"] = "Befreiung von Lorenhall"
+L["RAID_MANAFORGE_OMEGA"] = "Manaforge Omega"
 
 -- Settings
 L["SETTINGS_TITLE"] = "Mythic Dungeon Portale Einstellungen"

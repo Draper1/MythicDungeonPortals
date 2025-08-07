@@ -74,6 +74,7 @@ L["DUNGEON_GRIM_BATOL"] = "Grim Batol"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Assedio di Boralus"
 L["DUNGEON_THE_MOTHERLOAD"] = "La vena madre"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Operazione: Chiusa"
+L["DUNGEON_ECO_DOME_AL_DANI"] = "Eco-Cupola Al'dani"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Volta degli Incarnati"
@@ -83,6 +84,7 @@ L["RAID_CASTLE_NATHRIA"] = "Castello di Nathria"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Santuario del Dominio"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Sepolcro dei Primi"
 L["RAID_LIBERATION_OF_UNDERMINE"] = "Liberazione della Sottominiera"
+L["RAID_MANAFORGE_OMEGA"] = "Forgia di Mana Omega"
 
 -- Settings
 L["SETTINGS_TITLE"] = "Impostazioni Portali Spedizioni Mitiche"
