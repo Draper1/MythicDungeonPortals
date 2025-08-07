@@ -30,7 +30,7 @@ jobs:
       - name: Zip the project
         run: |
           mkdir MythicDungeonPortals
-          find . -maxdepth 1 ! -name 'MythicDungeonPortals' ! -name '.' ! -name '.git' ! -name 'screenshots' ! -name '.github' -exec mv {} MythicDungeonPortals/ \;
+          find . -maxdepth 1 ! -name 'MythicDungeonPortals' ! -name '.' ! -name '.git' ! -name 'screenshots' ! -name 'tests' ! -name '.github' -exec mv {} MythicDungeonPortals/ \;
           zip -r "MythicDungeonPortals-${{ env.version }}.zip" MythicDungeonPortals -x "MythicDungeonPortals/screenshots/*" "MythicDungeonPortals/.github/*"
 
       - name: Check if Tag Exists
