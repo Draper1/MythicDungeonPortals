@@ -1,5 +1,10 @@
 -- Unit tests for Constants.lua
-local TestFramework = require("test-framework")
+-- Add the tests directory to the package path
+package.path = package.path .. ";tests/?.lua"
+local success, TestFramework = pcall(require, "test-framework")
+if not success then
+    error("Failed to load test-framework: " .. tostring(TestFramework))
+end
 
 -- Mock the addon structure
 local addon = {
