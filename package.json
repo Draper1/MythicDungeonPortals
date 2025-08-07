@@ -1,0 +1,39 @@
+{
+  "name": "mythic-dungeon-portals",
+  "version": "1.0.0",
+  "description": "A World of Warcraft addon for managing Mythic+ and Challenge Mode portals",
+  "main": "MythicDungeonPortals.lua",
+  "scripts": {
+    "test": "lua tests/run-tests.lua",
+    "test:watch": "nodemon --exec 'lua tests/run-tests.lua' --ext lua",
+    "test:coverage": "lua tests/run-tests.lua --coverage",
+    "lint": "luacheck . --exclude-files tests/",
+    "format": "luaformatter . --exclude-files tests/"
+  },
+  "keywords": [
+    "wow",
+    "addon",
+    "mythic-plus",
+    "dungeons",
+    "portals"
+  ],
+  "author": "Andrew Draper",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/draper1/MythicDungeonPortals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/draper1/MythicDungeonPortals/issues"
+  },
+  "homepage": "https://github.com/draper1/MythicDungeonPortals#readme",
+  "dependencies": {
+    "lua": "^0.0.1"
+  }
+}
