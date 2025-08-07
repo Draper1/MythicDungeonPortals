@@ -15,10 +15,19 @@ local totalFailed = 0
 print("🚀 Starting MythicDungeonPortals Test Suite")
 print("=" .. string.rep("=", 50))
 
-for _, testSuite in ipairs(testSuites) do
-    local passed, failed = TestFramework.runTests(testSuite)
-    totalPassed = totalPassed + passed
-    totalFailed = totalFailed + failed
+for i, testSuite in ipairs(testSuites) do
+    -- Validate that we got a proper test suite
+    if type(testSuite) ~= "table" then
+        print("❌ Test suite " .. i .. " is not a table (got " .. type(testSuite) .. ")")
+        totalFailed = totalFailed + 1
+    elseif not testSuite.name or not testSuite.tests then
+        print("❌ Test suite " .. i .. " is missing required fields")
+        totalFailed = totalFailed + 1
+    else
+        local passed, failed = TestFramework.runTests(testSuite)
+        totalPassed = totalPassed + passed
+        totalFailed = totalFailed + failed
+    end
     print("")
 end
 

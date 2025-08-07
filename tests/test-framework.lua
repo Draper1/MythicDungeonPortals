@@ -91,19 +91,38 @@ end
 
 -- Test runner
 function TestFramework.runTests(testSuite)
+    -- Validate testSuite is a table
+    if type(testSuite) ~= "table" then
+        error("TestFramework.runTests: Expected table, got " .. type(testSuite))
+    end
+    
+    -- Validate testSuite has required fields
+    if not testSuite.name then
+        error("TestFramework.runTests: testSuite missing 'name' field")
+    end
+    
+    if not testSuite.tests or type(testSuite.tests) ~= "table" then
+        error("TestFramework.runTests: testSuite missing 'tests' table")
+    end
+    
     local passed = 0
     local failed = 0
     
     print("🧪 Running tests for " .. testSuite.name)
     
     for testName, testFunc in pairs(testSuite.tests) do
-        local success, error = pcall(testFunc)
-        if success then
-            print("  ✅ " .. testName)
-            passed = passed + 1
-        else
-            print("  ❌ " .. testName .. ": " .. error)
+        if type(testFunc) ~= "function" then
+            print("  ❌ " .. testName .. ": Not a function")
             failed = failed + 1
+        else
+            local success, error = pcall(testFunc)
+            if success then
+                print("  ✅ " .. testName)
+                passed = passed + 1
+            else
+                print("  ❌ " .. testName .. ": " .. error)
+                failed = failed + 1
+            end
         end
     end
     

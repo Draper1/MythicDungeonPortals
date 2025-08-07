@@ -130,5 +130,5 @@ local testSuite = {
     }
 }
 
--- Run the tests
-TestFramework.runTests(testSuite)
+-- Return the test suite instead of running it
+return testSuite
