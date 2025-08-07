@@ -1,5 +1,5 @@
 -- Unit tests for Constants.lua
-local TestFramework = require("tests.test-framework")
+local TestFramework = require("test-framework")
 
 -- Mock the addon structure
 local addon = {

@@ -1,11 +1,11 @@
 -- Test Runner for MythicDungeonPortals
 -- Run this script to execute all tests
 
-local TestFramework = require("tests.test-framework")
+local TestFramework = require("test-framework")
 
 -- Import all test suites
 local testSuites = {
-    require("tests.test-constants")
+    require("test-constants")
 }
 
 -- Run all test suites
