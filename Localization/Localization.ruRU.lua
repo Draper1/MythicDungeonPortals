@@ -74,7 +74,7 @@ L["DUNGEON_GRIM_BATOL"] = "Грим Батол"
 L["DUNGEON_SEIGE_OF_BORALUS"] = "Осада Боралуса"
 L["DUNGEON_THE_MOTHERLOAD"] = "Золотая ЖИЛА!!!"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Операция: Шлюз"
-L["DUNGEON_ECO_DOME_AL_DANI"] = "Эко-Купол Аль'Дани"
+L["DUNGEON_ECO_DOME_AL_DANI"] = "Заповедник Аль'Дани"
 
 -- Рейды
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Хранилище Воплощений"
@@ -84,7 +84,7 @@ L["RAID_CASTLE_NATHRIA"] = "Замок Нафрия"
 L["RAID_SANCTUM_OF_DOMINATION"] = "Святилище Господства"
 L["RAID_SEPULCHER_OF_THE_FIRST_ONES"] = "Гробница Предвечных"
 L["RAID_LIBERATION_OF_UNDERMINE"] = "Освобождение Нижней Шахты"
-L["RAID_MANAFORGE_OMEGA"] = "Манафордж Омега"
+L["RAID_MANAFORGE_OMEGA"] = "Манагорн Омега"
 
 -- Настройки
 L["LEFT_CLICK"] = "ЛКМ - открыть список порталов"
