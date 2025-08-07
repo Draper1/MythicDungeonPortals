@@ -59,6 +59,10 @@ for name, func in pairs(WoWAPI) do
     _G[name] = func
 end
 
+-- Also set up some common global variables that might be needed
+_G.UIParent = WoWAPI.UIParent
+_G.GameFontHighlight = WoWAPI.GameFontHighlight
+
 -- Test utilities
 function TestFramework.assert(condition, message)
     if not condition then

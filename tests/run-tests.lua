@@ -1,6 +1,8 @@
 -- Test Runner for MythicDungeonPortals
 -- Run this script to execute all tests
 
+-- Add the tests directory to the package path
+package.path = package.path .. ";tests/?.lua"
 local TestFramework = require("test-framework")
 
 -- Import all test suites
