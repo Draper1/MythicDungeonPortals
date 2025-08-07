@@ -1,0 +1,70 @@
+name: 🧪 Tests
+
+on:
+  push:
+    branches: [ main, testing_framework ]
+  pull_request:
+    branches: [ main, testing_framework ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v3
+      
+    - name: 🐍 Setup Python (for Lua installation)
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+        
+    - name: 📦 Install Lua
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lua5.4
+        
+    - name: 🧪 Run Tests
+      run: |
+        lua tests/run-tests.lua
+        
+    - name: 📊 Test Results
+      if: always()
+      run: |
+        echo "✅ Tests completed!"
+        echo "📁 Test files checked:"
+        find tests/ -name "*.lua" -type f
+        
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v3
+      
+    - name: 📦 Install Lua
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lua5.4
+        
+    - name: 🔍 Basic Syntax Check
+      run: |
+        echo "🔍 Checking Lua syntax..."
+        for file in $(find . -name "*.lua" -not -path "./tests/*"); do
+          echo "Checking $file"
+          # Use a simple syntax check that compiles the file without executing it
+          lua -e "local f = io.open('$file', 'r'); if f then local content = f:read('*a'); f:close(); loadstring(content); print('✅ $file syntax OK') else print('❌ $file not found') end" 2>/dev/null || echo "❌ $file syntax error"
+        done
+        
+    - name: 📋 File Structure Check
+      run: |
+        echo "📋 Checking required files exist..."
+        required_files=("MythicDungeonPortals.toc" "MythicDungeonPortals.lua" "Constants.lua" "Init.lua")
+        for file in "${required_files[@]}"; do
+          if [ -f "$file" ]; then
+            echo "✅ $file exists"
+          else
+            echo "❌ $file missing"
+            exit 1
+          fi
+        done

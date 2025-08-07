@@ -28,6 +28,30 @@ The addon automatically detects your earned achievements and displays the corres
 
 Whether you're a seasoned mythic+ runner or just starting your journey, this addon will streamline your dungeon navigation experience! 🎮
 
+## 🧪 Testing
+
+This addon includes a comprehensive testing framework to ensure reliability and quality.
+
+### Running Tests
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run with coverage
+npm run test:coverage
+```
+
+### Test Structure
+- **Unit Tests**: Test individual functions and data structures
+- **Mock Framework**: Simulates WoW API functions for testing
+- **Data Validation**: Ensures all mappings and constants are correct
+- **Localization Tests**: Verifies all language files are complete
+
+See the [Testing Guide](tests/README.md) for detailed information about writing and running tests.
+
 ---
 
 *Ready to conquer Azeroth's most challenging dungeons? Install MythicDungeonPortals and never lose your way again!* ⚔️
