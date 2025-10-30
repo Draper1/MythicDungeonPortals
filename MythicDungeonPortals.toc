@@ -20,7 +20,7 @@
 ## Notes-zhTW: 快速查找神話地城傳送門的簡單介面
 ## Notes-ruRU: Простой аддон для быстрого поиска порталов в М+ подземелья
 ## Author: Andrew Draper
-## Version: 1.29
+## Version: 1.30
 ## X-Curse-Project-ID: 960519
 ## SavedVariables: MythicDungeonPortalsSettings
 ## IconTexture: 237508
