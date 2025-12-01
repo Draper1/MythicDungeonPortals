@@ -48,3 +48,17 @@ v1.22.0 Add spell update logic so spells are learned in the addon when dungeons 
 v1.23.0 Reintroduce backgrounds
 
 v1.24.0 Fix Spell IDs for duplicate portals, fix minimap DB state and release for 11.1.5
+
+v1.25.0 Bump for 11.1.7
+
+v1.26.0 TBD
+
+v1.27.0 Add support for 11.02.00 Add New Portal Spell ID for Dungeon Eco-Dome Al'dani Add New Portal Spell ID for Raid Manaforge Omega
+
+v1.28.0 Fix Russian Translations
+
+v1.29.0 Fixed German Translations
+
+v1.30.0 Bump versions and dependancies
+
+v1.31.0 Fix spell cooldowns

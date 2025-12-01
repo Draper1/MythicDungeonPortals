@@ -64,6 +64,48 @@ local function HasLearnedSpell(spellID)
     return IsSpellKnown(spellID)
 end
 
+local function UpdateButtonCooldown(button)
+    if not button or not button.spellID or not button.cooldown then
+        return
+    end
+    
+    local startTime, duration
+    
+    -- Get cooldown info using C_Spell.GetSpellCooldown (modern API)
+    if C_Spell and C_Spell.GetSpellCooldown then
+        local cooldownInfo = C_Spell.GetSpellCooldown(button.spellID)
+        if cooldownInfo then
+            startTime = cooldownInfo.startTime
+            duration = cooldownInfo.duration
+        end
+    end
+    
+    -- Update cooldown display if we have valid cooldown data
+    -- Use SetCooldown method directly on the cooldown frame (standard WoW API)
+    if startTime and duration and duration > 0 then
+        button.cooldown:SetCooldown(startTime, duration)
+    else
+        -- Clear cooldown if spell is ready
+        button.cooldown:SetCooldown(0, 0)
+    end
+end
+
+local function UpdateAllCooldowns()
+    -- Update cooldowns for all buttons across all tabs
+    for expansion, tabFrame in pairs(contentFrames) do
+        local mapIDs = constants.mapExpansionToMapID[expansion]
+        if mapIDs then
+            for index, mapID in ipairs(mapIDs) do
+                local buttonName = "MDPSpellButton_" .. expansion .. "_" .. mapID
+                local button = _G[buttonName]
+                if button then
+                    UpdateButtonCooldown(button)
+                end
+            end
+        end
+    end
+end
+
 local function UpdateSpellStates(tabFrame, mapIDs, expansionName)
     -- Find all spell buttons in the tab and update their states
     for index, mapID in ipairs(mapIDs) do
@@ -89,6 +131,8 @@ local function UpdateSpellStates(tabFrame, mapIDs, expansionName)
                     button.handlersSet = true
                 end
             end
+            -- Update cooldown display
+            UpdateButtonCooldown(button)
         end
     end
 end
@@ -126,6 +170,26 @@ local function AddSpellIcons(tabFrame, mapIDs, expansionName)
             -- Create cooldown and other visual elements without checking spell state
             local cooldown = CreateFrame("Cooldown", nil, button, "CooldownFrameTemplate")
             cooldown:SetAllPoints(button)
+            
+            -- Store references for cooldown updates
+            button.cooldown = cooldown
+            button.spellID = spellID
+            
+            -- Set up periodic cooldown updates using OnUpdate
+            -- This ensures cooldowns are updated even if events don't fire
+            -- Only update when the parent frame is visible to save performance
+            local lastUpdate = 0
+            button:SetScript("OnUpdate", function(self, elapsed)
+                -- Only update if the frame is visible
+                if not MDPFrame:IsVisible() then
+                    return
+                end
+                lastUpdate = lastUpdate + elapsed
+                if lastUpdate >= 0.5 then  -- Update every 0.5 seconds
+                    lastUpdate = 0
+                    UpdateButtonCooldown(button)
+                end
+            end)
 
             -- Move all spell-specific logic to UpdateSpellStates
             button:SetMovable(true)
@@ -156,6 +220,7 @@ local function UpdateMDPTabs(selectedTabName)
         end
     end
     currentTab = selectedTabName
+    UpdateAllCooldowns()  -- Update cooldowns when switching tabs
 end
 
 -- Function to create tabs
@@ -222,6 +287,7 @@ local function ToggleFrame()
         MDPFrame:Hide()
     else
         MDPFrame:Show()
+        UpdateAllCooldowns()  -- Update cooldowns when frame is shown
     end
 end
 
@@ -241,7 +307,7 @@ local function BeginPlayerEnteringWorld()
     MDPFrame:Hide()
 end
 
-MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
+MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded, ...)
     if event == "ADDON_LOADED" and addonNameLoaded == addonName then
         MythicDungeonPortals:OnInitialize()
         MythicDungeonPortals:InitializeMinimap()
@@ -252,11 +318,17 @@ MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded)
         end
     elseif event == "PLAYER_ENTERING_WORLD" then
         BeginPlayerEnteringWorld()
+    elseif event == "SPELL_UPDATE_COOLDOWN" or event == "ACTIONBAR_UPDATE_COOLDOWN" or 
+           (event == "UNIT_SPELLCAST_SUCCEEDED" and select(1, ...) == "player") then
+        UpdateAllCooldowns()
     end
 end)
 
 MDPFrame:RegisterEvent("ADDON_LOADED")
 MDPFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+MDPFrame:RegisterEvent("SPELL_UPDATE_COOLDOWN")
+MDPFrame:RegisterEvent("ACTIONBAR_UPDATE_COOLDOWN")
+MDPFrame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 
 local function SlashCmdHandler(msg, editbox)
     local command, rest = msg:match("^(%S*)%s*(.-)$")
