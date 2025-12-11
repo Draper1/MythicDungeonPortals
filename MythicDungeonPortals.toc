@@ -20,7 +20,7 @@
 ## Notes-zhTW: 快速查找神話地城傳送門的簡單介面
 ## Notes-ruRU: Простой аддон для быстрого поиска порталов в М+ подземелья
 ## Author: Andrew Draper
-## Version: 1.31
+## Version: 1.32
 ## X-Curse-Project-ID: 960519
 ## SavedVariables: MythicDungeonPortalsSettings
 ## IconTexture: 237508
@@ -35,6 +35,14 @@
 ## Category-ruRU: Подземелья и рейды
 ## Category-zhCN: 地下城和团队副本
 ## Category-zhTW: 地城與團隊
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceAddon-3.0\AceAddon-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\lib.xml
 
 Init.lua
 Localization\Localization.lua

@@ -2,8 +2,6 @@ local _, addon = ...
 local constants = addon.constants
 local L = addon.L
 
-LibStub("AceAddon-3.0"):NewAddon(addon, "MythicDungeonPortals", "AceConsole-3.0")
-
 local function ToggleMDPFrame()
     if MDPFrame:IsShown() then
         MDPFrame:Hide()
@@ -20,8 +18,6 @@ local function ToggleSettingsFrame()
         settingsFrame:Show()
     end
 end
-
-local settingsFrame = MythicDungeonPortals:GetSettingsFrame()
 
 local mythicDungeonPortalsLDB = LibStub("LibDataBroker-1.1"):NewDataObject("Mythic Dungeon Portals", {
 	type = "data source",
