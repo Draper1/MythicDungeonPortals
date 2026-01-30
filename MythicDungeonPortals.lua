@@ -318,9 +318,13 @@ MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded, ...)
         end
     elseif event == "PLAYER_ENTERING_WORLD" then
         BeginPlayerEnteringWorld()
-    elseif event == "SPELL_UPDATE_COOLDOWN" or event == "ACTIONBAR_UPDATE_COOLDOWN" or 
-           (event == "UNIT_SPELLCAST_SUCCEEDED" and select(1, ...) == "player") then
+    elseif event == "SPELL_UPDATE_COOLDOWN" or event == "ACTIONBAR_UPDATE_COOLDOWN" then
         UpdateAllCooldowns()
+    elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
+        local unit = ...
+        if unit and UnitIsUnit(unit, "player") then
+            UpdateAllCooldowns()
+        end
     end
 end)
 
