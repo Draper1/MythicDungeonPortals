@@ -321,8 +321,8 @@ MDPFrame:SetScript("OnEvent", function(self, event, addonNameLoaded, ...)
     elseif event == "SPELL_UPDATE_COOLDOWN" or event == "ACTIONBAR_UPDATE_COOLDOWN" then
         UpdateAllCooldowns()
     elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
-        local unit = ...
-        if unit and UnitIsUnit(unit, "player") then
+        -- The first argument (addonNameLoaded) is the unit for this event
+        if addonNameLoaded == "player" then
             UpdateAllCooldowns()
         end
     end
