@@ -209,7 +209,7 @@ local mapExpansionToBackground = {
     [L["Shadowlands"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\shadowlands.tga",
     [L["Dragonflight"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\dragonflight.tga",
     [L["War Within"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\TWW.tga",
-    [L["Current Season"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\TWW.tga",
+    [L["Current Season"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\midnight.tga",
     [L["Midnight"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\midnight.tga",
 }
 
