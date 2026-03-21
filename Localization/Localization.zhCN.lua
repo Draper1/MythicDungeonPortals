@@ -12,6 +12,7 @@ L["Shadowlands"] = "暗影国度"
 L["Dragonflight"] = "巨龙时代"
 L["War Within"] = "地心之战"
 L["Current Season"] = "当前赛季"
+L["Midnight"] = "午夜"
 
 -- 地下城
 L["DUNGEON_TEMPLE_OF_THE_JADE_SERPENT"] = "青龙寺"
@@ -75,6 +76,12 @@ L["DUNGEON_SEIGE_OF_BORALUS"] = "围攻伯拉勒斯"
 L["DUNGEON_THE_MOTHERLOAD"] = "暴富矿区！！"
 L["DUNGEON_OPERATION_FLOODGATE"] = "水闸行动"
 L["DUNGEON_ECO_DOME_AL_DANI"] = "生态穹顶阿尔达尼"
+L["DUNGEON_WINDRUNNER_SPIRE"] = "风行者尖塔"
+L["DUNGEON_MAISARA_CAVERNS"] = "玛萨拉洞穴"
+L["DUNGEON_NEXUS_POINT_XENAS"] = "节点：泽纳斯"
+L["DUNGEON_MAGISTERS_TERRACE"] = "魔导师平台"
+L["DUNGEON_PIT_OF_SARON"] = "萨隆矿坑"
+L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "执政团之座"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "化身巨龙牢窟"

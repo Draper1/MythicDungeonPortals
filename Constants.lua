@@ -12,7 +12,8 @@ local myIdToExpansion = {
     [5] = L["Shadowlands"],
     [6] = L["Dragonflight"],
     [7] = L["War Within"],
-    [8] = L["Current Season"]
+    [8] = L["Current Season"],
+    [9] = L["Midnight"]
 }
 
 local orderedExpansions = {
@@ -24,11 +25,12 @@ local orderedExpansions = {
     L["Battle for Azeroth"],
     L["Shadowlands"],
     L["Dragonflight"],
-    L["War Within"]
+    L["War Within"],
+    L["Midnight"]
 }
 
 local mapExpansionToMapID = {
-    [L["Current Season"]] = {501, 503, 507, 511, 512, 303, 308, 1007},
+    [L["Current Season"]] = {600, 601, 602, 603, 604, 605, 606, 402},
     [L["Cataclysm"]] = {438, 456, 508},
     [L["Mists of Pandaria"]] = {3, 4, 5, 6, 7, 8, 9, 10, 2},
     [L["Warlords of Draenor"]] = {168, 169, 170, 171, 172, 173, 174, 165},
@@ -36,7 +38,8 @@ local mapExpansionToMapID = {
     [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252, 509, 510},
     [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308, 1003, 1004, 1005},
     [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463, 1000, 1001, 1002},
-    [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507, 511, 512, 1006, 1007}
+    [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507, 511, 512, 1006, 1007},
+    [L["Midnight"]] = {600, 601, 602, 603}
 }
 
 local mapIDtoSpellID = {
@@ -109,6 +112,13 @@ local mapIDtoSpellID = {
     [1005] = 373192, -- Sepulcher of the First Ones
     [1006] = 1226482, -- Liberation of Undermine
     [1007] = 1239155, -- Manaforge Omega
+    [600] = 1254400, -- Windrunner Spire
+    [601] = 1254559, -- Maisara Caverns
+    [602] = 1254563, -- Nexus-Point Xenas
+    [603] = 1254572, -- Magisters' Terrace
+    [604] = 1254557, -- Skyreach
+    [605] = 1254555, -- Pit of Saron
+    [606] = 1254551, -- Seat of the Triumvirate
 };
 
 local mapIDtoDungeonName = {
@@ -181,6 +191,13 @@ local mapIDtoDungeonName = {
     [1005] = L["RAID_SEPULCHER_OF_THE_FIRST_ONES"],
     [1006] = L["RAID_LIBERATION_OF_UNDERMINE"],
     [1007] = L["RAID_MANAFORGE_OMEGA"],
+    [600] = L["DUNGEON_WINDRUNNER_SPIRE"],
+    [601] = L["DUNGEON_MAISARA_CAVERNS"],
+    [602] = L["DUNGEON_NEXUS_POINT_XENAS"],
+    [603] = L["DUNGEON_MAGISTERS_TERRACE"],
+    [604] = L["DUNGEON_SKYREACH"],
+    [605] = L["DUNGEON_PIT_OF_SARON"],
+    [606] = L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"],
 }
 
 local mapExpansionToBackground = {
@@ -193,6 +210,7 @@ local mapExpansionToBackground = {
     [L["Dragonflight"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\dragonflight.tga",
     [L["War Within"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\TWW.tga",
     [L["Current Season"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\TWW.tga",
+    [L["Midnight"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\midnight.tga",
 }
 
 local iconPath = "Interface\\Icons\\Achievement_ChallengeMode_Gold"

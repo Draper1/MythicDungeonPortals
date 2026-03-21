@@ -12,6 +12,7 @@ L["Shadowlands"] = "Shadowlands"
 L["Dragonflight"] = "Dragonflight"
 L["War Within"] = "War Within"
 L["Current Season"] = "Aktuelle Saison"
+L["Midnight"] = "Midnight"
 
 -- Dungeons
 L["DUNGEON_TEMPLE_OF_THE_JADE_SERPENT"] = "Tempel der Jadeschlange"
@@ -75,6 +76,12 @@ L["DUNGEON_SEIGE_OF_BORALUS"] = "Seeschlacht von Boralus"
 L["DUNGEON_THE_MOTHERLOAD"] = "Das RIESENFLÖZ!!"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Operation: Schleuse"
 L["DUNGEON_ECO_DOME_AL_DANI"] = "Biokuppel Al'dani"
+L["DUNGEON_WINDRUNNER_SPIRE"] = "Windläuferspitze"
+L["DUNGEON_MAISARA_CAVERNS"] = "Maisarahöhlen"
+L["DUNGEON_NEXUS_POINT_XENAS"] = "Nexuspunkt Xenas"
+L["DUNGEON_MAGISTERS_TERRACE"] = "Terrasse der Magister"
+L["DUNGEON_PIT_OF_SARON"] = "Grube von Saron"
+L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "Sitz des Triumvirats"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Gewölbe der Inkarnationen"

@@ -12,6 +12,7 @@ L["Shadowlands"] = "어둠땅"
 L["Dragonflight"] = "용군단"
 L["War Within"] = "War Within"
 L["Current Season"] = "현재 시즌"
+L["Midnight"] = "미드나잇"
 
 -- 던전
 L["DUNGEON_TEMPLE_OF_THE_JADE_SERPENT"] = "옥룡사"
@@ -75,6 +76,12 @@ L["DUNGEON_SEIGE_OF_BORALUS"] = "보랄러스 공성전"
 L["DUNGEON_THE_MOTHERLOAD"] = "주 광맥"
 L["DUNGEON_OPERATION_FLOODGATE"] = "작전: 수문"
 L["DUNGEON_ECO_DOME_AL_DANI"] = "에코 돔 알다니"
+L["DUNGEON_WINDRUNNER_SPIRE"] = "윈드러너 첨탑"
+L["DUNGEON_MAISARA_CAVERNS"] = "마이사라 동굴"
+L["DUNGEON_NEXUS_POINT_XENAS"] = "연결점 제나스"
+L["DUNGEON_MAGISTERS_TERRACE"] = "마법학자의 정원"
+L["DUNGEON_PIT_OF_SARON"] = "사론의 구덩이"
+L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "삼두정의 권좌"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "현신의 금고"

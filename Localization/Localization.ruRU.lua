@@ -12,6 +12,7 @@ L["Shadowlands"] = "Темные Земли"
 L["Dragonflight"] = "Драконы"
 L["War Within"] = "Война Внутри"
 L["Current Season"] = "Текущий сезон"
+L["Midnight"] = "Полночь"
 
 -- Подземелья
 L["DUNGEON_TEMPLE_OF_THE_JADE_SERPENT"] = "Храм Нефритовой Змеи"
@@ -75,6 +76,12 @@ L["DUNGEON_SEIGE_OF_BORALUS"] = "Осада Боралуса"
 L["DUNGEON_THE_MOTHERLOAD"] = "Золотая ЖИЛА!!!"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Операция: Шлюз"
 L["DUNGEON_ECO_DOME_AL_DANI"] = "Заповедник Аль'Дани"
+L["DUNGEON_WINDRUNNER_SPIRE"] = "Шпиль Ветрокрылых"
+L["DUNGEON_MAISARA_CAVERNS"] = "Пещеры Майсара"
+L["DUNGEON_NEXUS_POINT_XENAS"] = "Нексус Ксенас"
+L["DUNGEON_MAGISTERS_TERRACE"] = "Терраса Магистров"
+L["DUNGEON_PIT_OF_SARON"] = "Яма Сарона"
+L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "Престол Триумвирата"
 
 -- Рейды
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Хранилище Воплощений"
