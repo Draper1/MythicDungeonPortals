@@ -62,3 +62,11 @@ v1.29.0 Fixed German Translations
 v1.30.0 Bump versions and dependancies
 
 v1.31.0 Fix spell cooldowns
+
+v1.32.0 Fix InCombat Bug
+
+v1.33.0 Fix Unit Spell Cast
+
+v1.34.0 Update MythicDungeonPortals.toc
+
+v1.35.0 Add Midnight expansion with dungeons, update Current Season for new season, add localized translations
