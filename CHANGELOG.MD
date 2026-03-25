@@ -70,3 +70,5 @@ v1.33.0 Fix Unit Spell Cast
 v1.34.0 Update MythicDungeonPortals.toc
 
 v1.35.0 Add Midnight expansion with dungeons, update Current Season for new season, add localized translations
+
+v1.36.0 Fix SetCooldown taint error after latest WoW patch

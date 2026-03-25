@@ -81,12 +81,11 @@ local function UpdateButtonCooldown(button)
     end
     
     -- Update cooldown display if we have valid cooldown data
-    -- Use SetCooldown method directly on the cooldown frame (standard WoW API)
+    -- Use CooldownFrame_Set (Blizzard wrapper) to avoid taint issues with SetCooldown
     if startTime and duration then
-        button.cooldown:SetCooldown(startTime, duration)
+        CooldownFrame_Set(button.cooldown, startTime, duration)
     else
-        -- Clear cooldown if spell is ready
-        button.cooldown:SetCooldown(0, 0)
+        CooldownFrame_Set(button.cooldown, 0, 0)
     end
 end
 
