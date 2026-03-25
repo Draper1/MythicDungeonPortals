@@ -69,7 +69,7 @@ local function UpdateButtonCooldown(button)
         return
     end
     
-    local startTime, duration
+    local startTime, duration, isSecretObject
     
     -- Get cooldown info using C_Spell.GetSpellCooldown (modern API)
     if C_Spell and C_Spell.GetSpellCooldown then
@@ -77,12 +77,19 @@ local function UpdateButtonCooldown(button)
         if cooldownInfo then
             startTime = cooldownInfo.startTime
             duration = cooldownInfo.duration
+            -- 12.0.1 API change made duration a secret value in combat
+            isSecretObject = issecretvalue(duration)
+            
         end
     end
-    
+
     -- Update cooldown display if we have valid cooldown data
     -- Use SetCooldown method directly on the cooldown frame (standard WoW API)
-    if startTime and duration then
+    -- 12.0.1 API change made duration a secret value in combat, use new cooldown api
+    if isSecretObject and duration then
+        button.cooldown:SetCooldownFromDurationObject(C_Spell.GetSpellCooldownDuration(button.spellID))
+    
+    elseif startTime and duration then
         button.cooldown:SetCooldown(startTime, duration)
     else
         -- Clear cooldown if spell is ready
