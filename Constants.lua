@@ -30,7 +30,7 @@ local orderedExpansions = {
 }
 
 local mapExpansionToMapID = {
-    [L["Current Season"]] = {600, 601, 602, 603, 604, 605, 606, 402},
+    [L["Current Season"]] = {600, 601, 602, 603, 171, 605, 606, 402},
     [L["Cataclysm"]] = {438, 456, 508},
     [L["Mists of Pandaria"]] = {3, 4, 5, 6, 7, 8, 9, 10, 2},
     [L["Warlords of Draenor"]] = {168, 169, 170, 171, 172, 173, 174, 165},
@@ -116,7 +116,6 @@ local mapIDtoSpellID = {
     [601] = 1254559, -- Maisara Caverns
     [602] = 1254563, -- Nexus-Point Xenas
     [603] = 1254572, -- Magisters' Terrace
-    [604] = 1254557, -- Skyreach
     [605] = 1254555, -- Pit of Saron
     [606] = 1254551, -- Seat of the Triumvirate
 };
@@ -195,7 +194,6 @@ local mapIDtoDungeonName = {
     [601] = L["DUNGEON_MAISARA_CAVERNS"],
     [602] = L["DUNGEON_NEXUS_POINT_XENAS"],
     [603] = L["DUNGEON_MAGISTERS_TERRACE"],
-    [604] = L["DUNGEON_SKYREACH"],
     [605] = L["DUNGEON_PIT_OF_SARON"],
     [606] = L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"],
 }
