@@ -3,6 +3,7 @@ local L = select(2, ...).L('itIT')
 L["MDP_TITLE"] = "Portali Spedizioni Mitiche"
 
 -- Espansioni
+L["Wrath of the Lich King"] = "Wrath of the Lich King"
 L["Cataclysm"] = "Cataclysm"
 L["Mists of Pandaria"] = "Mists of Pandaria"
 L["Warlords of Draenor"] = "Warlords of Draenor"
@@ -82,6 +83,13 @@ L["DUNGEON_NEXUS_POINT_XENAS"] = "Punto-Nexus Xenas"
 L["DUNGEON_MAGISTERS_TERRACE"] = "Terrazza dei Magistri"
 L["DUNGEON_PIT_OF_SARON"] = "Fossa di Saron"
 L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "Seggio del Triumvirato"
+L["DUNGEON_TEMPLE_OF_SETHRALISS"] = "Tempio di Sethraliss"
+L["DUNGEON_KINGS_REST"] = "Requie dei Re"
+L["DUNGEON_VOIDSCAR_ARENA"] = "Arena Sfregiavuoto"
+L["DUNGEON_THE_BLINDING_VALE"] = "Valle Accecante"
+L["DUNGEON_MURDER_ROW"] = "Traversa degli Intrighi"
+L["DUNGEON_DEN_OF_NALORAKK"] = "Tana di Nalorakk"
+L["DUNGEON_ALTAR_OF_FANGS"] = "Altare delle Zanne"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Volta degli Incarnati"

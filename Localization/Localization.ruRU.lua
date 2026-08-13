@@ -3,6 +3,7 @@ local L = select(2, ...).L('ruRU')
 L["MDP_TITLE"] = "Mythic Dungeon Portals"
 
 -- Дополнения
+L["Wrath of the Lich King"] = "Гнев Короля-лича"
 L["Cataclysm"] = "Катаклизм"
 L["Mists of Pandaria"] = "Туманы Пандарии"
 L["Warlords of Draenor"] = "Дренор"
@@ -82,6 +83,13 @@ L["DUNGEON_NEXUS_POINT_XENAS"] = "Нексус Ксенас"
 L["DUNGEON_MAGISTERS_TERRACE"] = "Терраса Магистров"
 L["DUNGEON_PIT_OF_SARON"] = "Яма Сарона"
 L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "Престол Триумвирата"
+L["DUNGEON_TEMPLE_OF_SETHRALISS"] = "Храм Сетралисс"
+L["DUNGEON_KINGS_REST"] = "Гробница королей"
+L["DUNGEON_VOIDSCAR_ARENA"] = "Арена Шрама Бездны"
+L["DUNGEON_THE_BLINDING_VALE"] = "Слепящая долина"
+L["DUNGEON_MURDER_ROW"] = "Закоулок душегубов"
+L["DUNGEON_DEN_OF_NALORAKK"] = "Берлога Налоракка"
+L["DUNGEON_ALTAR_OF_FANGS"] = "Алтарь Клыков"
 
 -- Рейды
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Хранилище Воплощений"

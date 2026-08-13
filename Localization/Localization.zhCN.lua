@@ -3,6 +3,7 @@ local L = select(2, ...).L('zhCN')
 L["MDP_TITLE"] = "史诗+地下城传送门"
 
 -- 扩展包
+L["Wrath of the Lich King"] = "巫妖王之怒"
 L["Cataclysm"] = "大地的裂变"
 L["Mists of Pandaria"] = "熊猫人之谜"
 L["Warlords of Draenor"] = "德拉诺之王"
@@ -82,6 +83,13 @@ L["DUNGEON_NEXUS_POINT_XENAS"] = "节点：泽纳斯"
 L["DUNGEON_MAGISTERS_TERRACE"] = "魔导师平台"
 L["DUNGEON_PIT_OF_SARON"] = "萨隆矿坑"
 L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "执政团之座"
+L["DUNGEON_TEMPLE_OF_SETHRALISS"] = "塞塔里斯神庙"
+L["DUNGEON_KINGS_REST"] = "诸王之眠"
+L["DUNGEON_VOIDSCAR_ARENA"] = "虚空之痕竞技场"
+L["DUNGEON_THE_BLINDING_VALE"] = "夺目谷"
+L["DUNGEON_MURDER_ROW"] = "谋杀小径"
+L["DUNGEON_DEN_OF_NALORAKK"] = "纳洛拉克的洞穴"
+L["DUNGEON_ALTAR_OF_FANGS"] = "毒牙祭坛"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "化身巨龙牢窟"

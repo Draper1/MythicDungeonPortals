@@ -3,6 +3,7 @@ local L = select(2, ...).L('esES')
 L["MDP_TITLE"] = "Portales de Mazmorras Míticas"
 
 -- Expansiones
+L["Wrath of the Lich King"] = "Ira del Rey Exánime"
 L["Cataclysm"] = "Cataclismo"
 L["Mists of Pandaria"] = "Nieblas de Pandaria"
 L["Warlords of Draenor"] = "Señores de la Guerra de Draenor"
@@ -12,6 +13,7 @@ L["Shadowlands"] = "Tierras Sombrías"
 L["Dragonflight"] = "Vuelo del Dragón"
 L["War Within"] = "War Within"
 L["Current Season"] = "Temporada Actual"
+L["Midnight"] = "Midnight"
 
 -- Mazmorras
 L["DUNGEON_TEMPLE_OF_THE_JADE_SERPENT"] = "Templo del Dragón de Jade"
@@ -75,6 +77,19 @@ L["DUNGEON_SEIGE_OF_BORALUS"] = "Asedio de Boralus"
 L["DUNGEON_THE_MOTHERLOAD"] = "La veta madre"
 L["DUNGEON_OPERATION_FLOODGATE"] = "Operación: Compuerta"
 L["DUNGEON_ECO_DOME_AL_DANI"] = "Eco-Domo Al'dani"
+L["DUNGEON_WINDRUNNER_SPIRE"] = "Aguja Brisaveloz"
+L["DUNGEON_MAISARA_CAVERNS"] = "Cavernas Maisara"
+L["DUNGEON_NEXUS_POINT_XENAS"] = "Nexo-Punto Xenas"
+L["DUNGEON_MAGISTERS_TERRACE"] = "Bancal del Magister"
+L["DUNGEON_PIT_OF_SARON"] = "Foso de Saron"
+L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "Sede del Triunvirato"
+L["DUNGEON_TEMPLE_OF_SETHRALISS"] = "Templo de Sethraliss"
+L["DUNGEON_KINGS_REST"] = "Reposo de los Reyes"
+L["DUNGEON_VOIDSCAR_ARENA"] = "Arena Lacravacua"
+L["DUNGEON_THE_BLINDING_VALE"] = "El Valle Cegador"
+L["DUNGEON_MURDER_ROW"] = "El Frontal de la Muerte"
+L["DUNGEON_DEN_OF_NALORAKK"] = "Guarida de Nalorakk"
+L["DUNGEON_ALTAR_OF_FANGS"] = "Altar de los Colmillos"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "Bóveda de los Encarnados"

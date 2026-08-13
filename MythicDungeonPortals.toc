@@ -1,4 +1,4 @@
-## Interface: 120001, 120005, 120007
+## Interface: 120001, 120005, 120007, 120100
 ## Title: Mythic Dungeon Portals
 ## Title-ruRU: Порталы М+ подземелий
 ## Title-deDE: Mythische Dungeon-Portale
@@ -20,7 +20,7 @@
 ## Notes-zhTW: 快速查找神話地城傳送門的簡單介面
 ## Notes-ruRU: Простой аддон для быстрого поиска порталов в М+ подземелья
 ## Author: Andrew Draper
-## Version: 1.38
+## Version: 1.39
 ## X-Curse-Project-ID: 960519
 ## SavedVariables: MythicDungeonPortalsSettings
 ## IconTexture: 237508
@@ -49,6 +49,7 @@ Localization\Localization.lua
 Localization\Localization.enUS.lua
 Localization\Localization.ptBR.lua
 Localization\Localization.deDE.lua
+Localization\Localization.esES.lua
 Localization\Localization.esMX.lua
 Localization\Localization.frFR.lua
 Localization\Localization.itIT.lua

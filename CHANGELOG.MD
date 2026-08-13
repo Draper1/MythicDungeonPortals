@@ -74,3 +74,5 @@ v1.35.0 Add Midnight expansion with dungeons, update Current Season for new seas
 v1.36.0 Fix SetCooldown taint error after latest WoW patch
 
 v1.37.0 Fix Skyreach portal ID
+
+v1.39.0 Add 12.1 season support: new Current Season rotation, add Voidscar Arena, The Blinding Vale, Murder Row, Den of Nalorakk and Altar of Fangs to Midnight, add Temple of Sethraliss and Kings' Rest to Battle for Azeroth, add Wrath of the Lich King tab with Pit of Saron, add Seat of the Triumvirate to Legion, with localized translations
