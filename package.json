@@ -20,7 +20,7 @@
   "author": "Andrew Draper",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.1.14"
   },
   "engines": {
     "node": ">=14.0.0"
