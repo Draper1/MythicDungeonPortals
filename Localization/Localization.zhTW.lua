@@ -3,6 +3,7 @@ local L = select(2, ...).L('zhTW')
 L["MDP_TITLE"] = "英雄之路傳送門"
 
 -- Expansions
+L["Wrath of the Lich King"] = "巫妖王之怒"
 L["Cataclysm"] = "浩劫與重生"
 L["Mists of Pandaria"] = "潘達利亞之謎"
 L["Warlords of Draenor"] = "德拉諾之霸"
@@ -82,6 +83,13 @@ L["DUNGEON_NEXUS_POINT_XENAS"] = "奧核點瑟納斯"
 L["DUNGEON_MAGISTERS_TERRACE"] = "博學者殿堂"
 L["DUNGEON_PIT_OF_SARON"] = "薩倫之淵"
 L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "三傑議會之座"
+L["DUNGEON_TEMPLE_OF_SETHRALISS"] = "瑟沙利斯神廟"
+L["DUNGEON_KINGS_REST"] = "諸王之眠"
+L["DUNGEON_VOIDSCAR_ARENA"] = "虛無之痕競技場"
+L["DUNGEON_THE_BLINDING_VALE"] = "盲目谷地"
+L["DUNGEON_MURDER_ROW"] = "兇殺路"
+L["DUNGEON_DEN_OF_NALORAKK"] = "納羅拉克之穴"
+L["DUNGEON_ALTAR_OF_FANGS"] = "毒牙祭壇"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "洪荒化身牢獄"

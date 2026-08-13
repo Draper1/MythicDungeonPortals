@@ -3,6 +3,7 @@ local L = select(2, ...).L('koKR')
 L["MDP_TITLE"] = "신화 던전 포탈"
 
 -- 확장팩
+L["Wrath of the Lich King"] = "리치 왕의 분노"
 L["Cataclysm"] = "대격변"
 L["Mists of Pandaria"] = "판다리아의 안개"
 L["Warlords of Draenor"] = "드레노어의 전쟁군주"
@@ -82,6 +83,13 @@ L["DUNGEON_NEXUS_POINT_XENAS"] = "연결점 제나스"
 L["DUNGEON_MAGISTERS_TERRACE"] = "마법학자의 정원"
 L["DUNGEON_PIT_OF_SARON"] = "사론의 구덩이"
 L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"] = "삼두정의 권좌"
+L["DUNGEON_TEMPLE_OF_SETHRALISS"] = "세스랄리스 사원"
+L["DUNGEON_KINGS_REST"] = "왕들의 안식처"
+L["DUNGEON_VOIDSCAR_ARENA"] = "공허흉터 투기장"
+L["DUNGEON_THE_BLINDING_VALE"] = "눈부신 골짜기"
+L["DUNGEON_MURDER_ROW"] = "죽음의 골목"
+L["DUNGEON_DEN_OF_NALORAKK"] = "날로라크의 소굴"
+L["DUNGEON_ALTAR_OF_FANGS"] = "송곳니의 제단"
 
 -- Raids
 L["RAID_VAULT_OF_THE_INCARNATES"] = "현신의 금고"

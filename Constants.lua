@@ -13,11 +13,13 @@ local myIdToExpansion = {
     [6] = L["Dragonflight"],
     [7] = L["War Within"],
     [8] = L["Current Season"],
-    [9] = L["Midnight"]
+    [9] = L["Midnight"],
+    [10] = L["Wrath of the Lich King"]
 }
 
 local orderedExpansions = {
     L["Current Season"],
+    L["Wrath of the Lich King"],
     L["Cataclysm"],
     L["Mists of Pandaria"],
     L["Warlords of Draenor"],
@@ -30,16 +32,17 @@ local orderedExpansions = {
 }
 
 local mapExpansionToMapID = {
-    [L["Current Season"]] = {600, 601, 602, 603, 171, 605, 606, 402},
+    [L["Current Season"]] = {607, 608, 246, 609, 249, 610, 611, 399},
+    [L["Wrath of the Lich King"]] = {605},
     [L["Cataclysm"]] = {438, 456, 508},
     [L["Mists of Pandaria"]] = {3, 4, 5, 6, 7, 8, 9, 10, 2},
     [L["Warlords of Draenor"]] = {168, 169, 170, 171, 172, 173, 174, 165},
-    [L["Legion"]] = {198, 199, 200, 206, 210, 211},
-    [L["Battle for Azeroth"]] = {244, 245, 248, 251, 252, 509, 510},
+    [L["Legion"]] = {198, 199, 200, 206, 210, 211, 606},
+    [L["Battle for Azeroth"]] = {244, 245, 246, 248, 249, 251, 252, 509, 510},
     [L["Shadowlands"]] = {300, 301, 302, 303, 304, 305, 306, 307, 308, 1003, 1004, 1005},
     [L["Dragonflight"]] = {399, 400, 401, 402, 403, 404, 405, 406, 463, 1000, 1001, 1002},
     [L["War Within"]] = {500, 501, 502, 503, 504, 505, 506, 507, 511, 512, 1006, 1007},
-    [L["Midnight"]] = {600, 601, 602, 603}
+    [L["Midnight"]] = {600, 601, 602, 603, 607, 608, 609, 610, 611}
 }
 
 local mapIDtoSpellID = {
@@ -68,7 +71,9 @@ local mapIDtoSpellID = {
     [211] = 373262, -- Karazhan
     [244] = 424187, -- Atal'Dazar
     [245] = 410071, -- Freehold
+    [246] = 1286828, -- Temple of Sethraliss
     [248] = 424167, -- Waycrest
+    [249] = 1286831, -- Kings' Rest
     [251] = 410074, -- Underrot
     [252] = 373274, -- Mechagon
     [300] = 354462, -- The Necrotic Wake
@@ -118,6 +123,11 @@ local mapIDtoSpellID = {
     [603] = 1254572, -- Magisters' Terrace
     [605] = 1254555, -- Pit of Saron
     [606] = 1254551, -- Seat of the Triumvirate
+    [607] = 1286804, -- Voidscar Arena
+    [608] = 1286801, -- The Blinding Vale
+    [609] = 1286809, -- Murder Row
+    [610] = 1286807, -- Den of Nalorakk
+    [611] = 1286812, -- Altar of Fangs
 };
 
 local mapIDtoDungeonName = {
@@ -146,7 +156,9 @@ local mapIDtoDungeonName = {
     [211] = L["DUNGEON_KARAZHAN"],
     [244] = L["DUNGEON_ATALDAZAR"],
     [245] = L["DUNGEON_FREEHOLD"],
+    [246] = L["DUNGEON_TEMPLE_OF_SETHRALISS"],
     [248] = L["DUNGEON_WAYCREST_MANOR"],
+    [249] = L["DUNGEON_KINGS_REST"],
     [251] = L["DUNGEON_THE_UNDERROT"],
     [252] = L["DUNGEON_MECHAGON"],
     [300] = L["DUNGEON_THE_NECROTIC_WAKE"],
@@ -196,9 +208,15 @@ local mapIDtoDungeonName = {
     [603] = L["DUNGEON_MAGISTERS_TERRACE"],
     [605] = L["DUNGEON_PIT_OF_SARON"],
     [606] = L["DUNGEON_SEAT_OF_THE_TRIUMVIRATE"],
+    [607] = L["DUNGEON_VOIDSCAR_ARENA"],
+    [608] = L["DUNGEON_THE_BLINDING_VALE"],
+    [609] = L["DUNGEON_MURDER_ROW"],
+    [610] = L["DUNGEON_DEN_OF_NALORAKK"],
+    [611] = L["DUNGEON_ALTAR_OF_FANGS"],
 }
 
 local mapExpansionToBackground = {
+    [L["Wrath of the Lich King"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\wotlk.tga",
     [L["Cataclysm"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\cata.tga",
     [L["Mists of Pandaria"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\mists.tga",
     [L["Warlords of Draenor"]] = "Interface\\AddOns\\MythicDungeonPortals\\Backgrounds\\wod.tga",
